@@ -14,7 +14,7 @@ import (
 
 	unixfs "github.com/ipfs/boxo/ipld/unixfs"
 	unixfs_pb "github.com/ipfs/boxo/ipld/unixfs/pb"
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	iface "github.com/ipfs/kubo/core/coreiface"
 	options "github.com/ipfs/kubo/core/coreiface/options"
 )

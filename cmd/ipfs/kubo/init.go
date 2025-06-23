@@ -19,7 +19,7 @@ import (
 	fsrepo "github.com/ipfs/kubo/repo/fsrepo"
 
 	"github.com/ipfs/boxo/files"
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	config "github.com/ipfs/kubo/config"
 	options "github.com/ipfs/kubo/core/coreiface/options"
 )

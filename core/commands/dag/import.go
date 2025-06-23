@@ -8,7 +8,7 @@ import (
 	"github.com/ipfs/boxo/files"
 	blocks "github.com/ipfs/go-block-format"
 	cid "github.com/ipfs/go-cid"
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	ipld "github.com/ipfs/go-ipld-format"
 	ipldlegacy "github.com/ipfs/go-ipld-legacy"
 	"github.com/ipfs/kubo/config"

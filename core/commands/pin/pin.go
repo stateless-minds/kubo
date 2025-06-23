@@ -14,7 +14,7 @@ import (
 	verifcid "github.com/ipfs/boxo/verifcid"
 	cid "github.com/ipfs/go-cid"
 	cidenc "github.com/ipfs/go-cidutil/cidenc"
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	coreiface "github.com/ipfs/kubo/core/coreiface"
 	options "github.com/ipfs/kubo/core/coreiface/options"
 

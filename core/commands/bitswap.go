@@ -10,7 +10,7 @@ import (
 	bitswap "github.com/ipfs/boxo/bitswap"
 	"github.com/ipfs/boxo/bitswap/server"
 	cidutil "github.com/ipfs/go-cidutil"
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 )
 

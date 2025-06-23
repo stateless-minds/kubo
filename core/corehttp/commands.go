@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
-	cmdsHttp "github.com/stateless-minds/go-ipfs-cmds/http"
+	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmdsHttp "github.com/ipfs/go-ipfs-cmds/http"
 	version "github.com/ipfs/kubo"
 	oldcmds "github.com/ipfs/kubo/commands"
 	config "github.com/ipfs/kubo/config"
