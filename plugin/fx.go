@@ -1,7 +1,7 @@
 package plugin
 
 import (
-	"github.com/ipfs/kubo/core"
+	"github.com/stateless-minds/kubo/core"
 	"go.uber.org/fx"
 )
 

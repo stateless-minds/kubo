@@ -25,7 +25,7 @@ Create a new release configuration JSON in the `experiments/` directory, based o
 			"name": "kubo190-4283b9",
 			"description": "kubo 0.19.0-rc1",
 			"build_from_git": {
-				"repo": "https://github.com/ipfs/kubo.git",
+				"repo": "https://github.com/stateless-minds/kubo.git",
 				"commit":"4283b9d98f8438fc8751ccc840d8fc24eeae6f13"
 			}
 		},
@@ -33,7 +33,7 @@ Create a new release configuration JSON in the `experiments/` directory, based o
 			"name": "kubo181",
 			"description": "kubo 0.18.",
 			"build_from_git": {
-				"repo": "https://github.com/ipfs/kubo.git",
+				"repo": "https://github.com/stateless-minds/kubo.git",
 				"tag":"v0.18.1"
 			}
 		}

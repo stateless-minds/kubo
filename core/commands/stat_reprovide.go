@@ -9,8 +9,8 @@ import (
 	humanize "github.com/dustin/go-humanize"
 	"github.com/ipfs/boxo/provider"
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	"github.com/ipfs/kubo/core/commands/cmdenv"
 	"github.com/libp2p/go-libp2p-kad-dht/fullrt"
+	"github.com/stateless-minds/kubo/core/commands/cmdenv"
 	"golang.org/x/exp/constraints"
 )
 
@@ -26,7 +26,7 @@ var statReprovideCmd = &cmds.Command{
 		ShortDescription: `
 Returns statistics about the content the node is reproviding every
 Reprovider.Interval according to Reprovider.Strategy:
-https://github.com/ipfs/kubo/blob/master/docs/config.md#reprovider
+https://github.com/stateless-minds/kubo/blob/master/docs/config.md#reprovider
 
 This interface is not stable and may change from release to release.
 

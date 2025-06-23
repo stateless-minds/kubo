@@ -4,11 +4,11 @@ import (
 	"context"
 	"time"
 
-	iface "github.com/ipfs/kubo/core/coreiface"
 	"github.com/libp2p/go-libp2p/core/network"
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/libp2p/go-libp2p/core/protocol"
 	"github.com/multiformats/go-multiaddr"
+	iface "github.com/stateless-minds/kubo/core/coreiface"
 )
 
 type SwarmAPI HttpApi

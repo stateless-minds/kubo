@@ -63,7 +63,7 @@ jobs:
           cp go.sum go.sum.bak
 
           # make sure the examples run against the current version of kubo
-          go mod edit -replace github.com/ipfs/kubo=./../../..
+          go mod edit -replace github.com/stateless-minds/kubo=./../../..
           go mod tidy
 
           go test -v ./...

@@ -18,9 +18,9 @@ import (
 	"bazil.org/fuse"
 	"bazil.org/fuse/fs"
 	"bazil.org/fuse/fs/fstestutil"
-	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/node"
 	"github.com/libp2p/go-libp2p-testing/ci"
+	"github.com/stateless-minds/kubo/core"
+	"github.com/stateless-minds/kubo/core/node"
 )
 
 // Create an Ipfs.Node, a filesystem and a mount point.

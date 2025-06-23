@@ -10,9 +10,9 @@ import (
 	"time"
 
 	logging "github.com/ipfs/go-log/v2"
-	. "github.com/ipfs/kubo/test/cli/testutils"
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/multiformats/go-multiaddr"
+	. "github.com/stateless-minds/kubo/test/cli/testutils"
 )
 
 // Harness tracks state for a test, such as temp dirs and IFPS nodes, and cleans them up after the test.

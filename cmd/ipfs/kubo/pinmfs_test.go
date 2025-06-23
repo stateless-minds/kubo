@@ -14,9 +14,9 @@ import (
 	merkledag "github.com/ipfs/boxo/ipld/merkledag"
 	ipld "github.com/ipfs/go-ipld-format"
 	logging "github.com/ipfs/go-log/v2"
-	config "github.com/ipfs/kubo/config"
 	"github.com/libp2p/go-libp2p/core/host"
 	peer "github.com/libp2p/go-libp2p/core/peer"
+	config "github.com/stateless-minds/kubo/config"
 )
 
 type testPinMFSContext struct {

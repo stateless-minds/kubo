@@ -6,7 +6,7 @@ package node
 import (
 	"errors"
 
-	core "github.com/ipfs/kubo/core"
+	core "github.com/stateless-minds/kubo/core"
 )
 
 func Mount(node *core.IpfsNode, fsdir, nsdir, mfsdir string) error {

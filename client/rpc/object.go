@@ -5,8 +5,8 @@ import (
 
 	"github.com/ipfs/boxo/path"
 	"github.com/ipfs/go-cid"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	caopts "github.com/ipfs/kubo/core/coreiface/options"
+	iface "github.com/stateless-minds/kubo/core/coreiface"
+	caopts "github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 type ObjectAPI HttpApi

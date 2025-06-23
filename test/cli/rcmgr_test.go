@@ -4,13 +4,13 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/core/node/libp2p"
-	"github.com/ipfs/kubo/test/cli/harness"
-	"github.com/ipfs/kubo/test/cli/testutils"
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/libp2p/go-libp2p/core/protocol"
 	rcmgr "github.com/libp2p/go-libp2p/p2p/host/resource-manager"
+	"github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/core/node/libp2p"
+	"github.com/stateless-minds/kubo/test/cli/harness"
+	"github.com/stateless-minds/kubo/test/cli/testutils"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

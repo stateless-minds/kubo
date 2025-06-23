@@ -6,12 +6,12 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/ipfs/kubo/repo"
+	"github.com/stateless-minds/kubo/repo"
 
 	ds "github.com/ipfs/go-datastore"
 	"github.com/ipfs/go-datastore/mount"
 	dssync "github.com/ipfs/go-datastore/sync"
-	"github.com/ipfs/go-ds-measure"
+	measure "github.com/ipfs/go-ds-measure"
 )
 
 // ConfigFromMap creates a new datastore config from a map.

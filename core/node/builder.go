@@ -7,15 +7,15 @@ import (
 
 	"go.uber.org/fx"
 
-	"github.com/ipfs/kubo/core/node/helpers"
-	"github.com/ipfs/kubo/core/node/libp2p"
-	"github.com/ipfs/kubo/repo"
+	"github.com/stateless-minds/kubo/core/node/helpers"
+	"github.com/stateless-minds/kubo/core/node/libp2p"
+	"github.com/stateless-minds/kubo/repo"
 
 	ds "github.com/ipfs/go-datastore"
 	dsync "github.com/ipfs/go-datastore/sync"
-	cfg "github.com/ipfs/kubo/config"
 	"github.com/libp2p/go-libp2p/core/crypto"
 	peer "github.com/libp2p/go-libp2p/core/peer"
+	cfg "github.com/stateless-minds/kubo/config"
 )
 
 type BuildCfg struct {

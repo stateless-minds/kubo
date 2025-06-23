@@ -10,10 +10,10 @@ import (
 	cid "github.com/ipfs/go-cid"
 	ipld "github.com/ipfs/go-ipld-format"
 	logging "github.com/ipfs/go-log/v2"
-	config "github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/core"
 	"github.com/libp2p/go-libp2p/core/host"
 	peer "github.com/libp2p/go-libp2p/core/peer"
+	config "github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/core"
 )
 
 // mfslog is the logger for remote mfs pinning.
@@ -118,7 +118,7 @@ func pinAllMFS(ctx context.Context, node pinMFSNode, cfg *config.Config, lastPin
 	// get the most recent MFS root cid.
 	// Warning! This can be super expensive.
 	// See https://github.com/ipfs/boxo/pull/751
-	// and https://github.com/ipfs/kubo/issues/8694
+	// and https://github.com/stateless-minds/kubo/issues/8694
 	// Reading an MFS-directory nodes can take minutes due to
 	// ever growing cache being synced to unixfs.
 	rootNode, err := node.RootNode()

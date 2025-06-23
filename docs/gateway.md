@@ -32,8 +32,8 @@ There is a list of third-party public gateways provided by the IPFS community at
 ## Configuration
 
 The `Gateway.*` configuration options are (briefly) described in the
-[config](https://github.com/ipfs/kubo/blob/master/docs/config.md#gateway)
-documentation, including a list of common [gateway recipes](https://github.com/ipfs/kubo/blob/master/docs/config.md#gateway-recipes).
+[config](https://github.com/stateless-minds/kubo/blob/master/docs/config.md#gateway)
+documentation, including a list of common [gateway recipes](https://github.com/stateless-minds/kubo/blob/master/docs/config.md#gateway-recipes).
 
 ### Debug
 The gateway's log level can be changed with this command:
@@ -53,7 +53,7 @@ a directory:
 2. Dynamically build and serve a listing of the contents of the directory.
 
 <sub><sup>&dagger;</sup>This redirect is skipped if the query string contains a
-`go-get=1` parameter. See [PR#3964](https://github.com/ipfs/kubo/pull/3963)
+`go-get=1` parameter. See [PR#3964](https://github.com/stateless-minds/kubo/pull/3963)
 for details</sub>
 
 ## Static Websites
@@ -110,7 +110,7 @@ This is equivalent of `ipfs block get`.
 Returns a [CAR](https://ipld.io/specs/transport/car/) stream for specific DAG and selector.
 
 Right now only 'full DAG' implicit selector is implemented.
-Support for user-provided IPLD selectors is tracked in https://github.com/ipfs/kubo/issues/8769.
+Support for user-provided IPLD selectors is tracked in https://github.com/stateless-minds/kubo/issues/8769.
 
 This is a rough equivalent of `ipfs dag export`.
 

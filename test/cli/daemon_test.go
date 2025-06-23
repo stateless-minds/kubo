@@ -4,7 +4,7 @@ import (
 	"os/exec"
 	"testing"
 
-	"github.com/ipfs/kubo/test/cli/harness"
+	"github.com/stateless-minds/kubo/test/cli/harness"
 )
 
 func TestDaemon(t *testing.T) {

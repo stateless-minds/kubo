@@ -12,8 +12,8 @@
   <a href="https://ipfs.tech"><img src="https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square" alt="Official Part of IPFS Project"></a>
   <a href="https://discuss.ipfs.tech"><img alt="Discourse Forum" src="https://img.shields.io/discourse/posts?server=https%3A%2F%2Fdiscuss.ipfs.tech"></a>
   <a href="https://matrix.to/#/#ipfs-space:ipfs.io"><img alt="Matrix" src="https://img.shields.io/matrix/ipfs-space%3Aipfs.io?server_fqdn=matrix.org"></a>
-  <a href="https://github.com/ipfs/kubo/actions"><img src="https://img.shields.io/github/actions/workflow/status/ipfs/kubo/gobuild.yml?branch=master"></a>
-  <a href="https://github.com/ipfs/kubo/releases"><img alt="GitHub release" src="https://img.shields.io/github/v/release/ipfs/kubo?filter=!*rc*"></a>
+  <a href="https://github.com/stateless-minds/kubo/actions"><img src="https://img.shields.io/github/actions/workflow/status/ipfs/kubo/gobuild.yml?branch=master"></a>
+  <a href="https://github.com/stateless-minds/kubo/releases"><img alt="GitHub release" src="https://img.shields.io/github/v/release/ipfs/kubo?filter=!*rc*"></a>
 </p>
 
 <hr />
@@ -43,7 +43,7 @@ IPFS is a global, versioned, peer-to-peer filesystem. It combines good ideas fro
 For more info see: https://docs.ipfs.tech/concepts/what-is-ipfs/
 
 Before opening an issue, consider using one of the following locations to ensure you are opening your thread in the right place:
-  - kubo (previously named go-ipfs) _implementation_ bugs in [this repo](https://github.com/ipfs/kubo/issues).
+  - kubo (previously named go-ipfs) _implementation_ bugs in [this repo](https://github.com/stateless-minds/kubo/issues).
   - Documentation issues in [ipfs/docs issues](https://github.com/ipfs/ipfs-docs/issues).
   - IPFS _design_ in [ipfs/specs issues](https://github.com/ipfs/specs/issues).
   - Exploration of new ideas in [ipfs/notes issues](https://github.com/ipfs/notes/issues).
@@ -54,7 +54,7 @@ Before opening an issue, consider using one of the following locations to ensure
 
 ## Next milestones
 
-[Milestones on GitHub](https://github.com/ipfs/kubo/milestones)
+[Milestones on GitHub](https://github.com/stateless-minds/kubo/milestones)
 
 
 ## Table of Contents
@@ -133,18 +133,18 @@ Official images are published at https://hub.docker.com/r/ipfs/kubo/: [![Docker 
 
 #### 🟢 Release Images
   - These are production grade images. Use them.
-  - `latest` and [`release`](https://hub.docker.com/r/ipfs/kubo/tags?name=release) tags always point at [the latest stable release](https://github.com/ipfs/kubo/releases/latest). If you use this, remember to `docker pull` periodically to update.
-  - [`vN.N.N`](https://hub.docker.com/r/ipfs/kubo/tags?name=v) points at a specific [release tag](https://github.com/ipfs/kubo/releases)
+  - `latest` and [`release`](https://hub.docker.com/r/ipfs/kubo/tags?name=release) tags always point at [the latest stable release](https://github.com/stateless-minds/kubo/releases/latest). If you use this, remember to `docker pull` periodically to update.
+  - [`vN.N.N`](https://hub.docker.com/r/ipfs/kubo/tags?name=v) points at a specific [release tag](https://github.com/stateless-minds/kubo/releases)
 
 #### 🟠 Developer Preview Images
   - These tags are used by developers for internal testing, not intended for end users or production use.
-  - [`master-latest`](https://hub.docker.com/r/ipfs/kubo/tags?name=master-latest) always points at the `HEAD` of the [`master`](https://github.com/ipfs/kubo/commits/master/) branch
+  - [`master-latest`](https://hub.docker.com/r/ipfs/kubo/tags?name=master-latest) always points at the `HEAD` of the [`master`](https://github.com/stateless-minds/kubo/commits/master/) branch
   - [`master-YYYY-DD-MM-GITSHA`](https://hub.docker.com/r/ipfs/kubo/tags?name=master-2) points at a specific commit from the `master` branch
 
 #### 🔴 Internal Staging Images
   - We use `staging` for testing arbitrary commits and experimental patches.
     - To build image for current HEAD, force push to `staging` via  `git push origin HEAD:staging --force`)
-  - [`staging-latest`](https://hub.docker.com/r/ipfs/kubo/tags?name=staging-latest) always points at the `HEAD` of the [`staging`](https://github.com/ipfs/kubo/commits/staging/) branch
+  - [`staging-latest`](https://hub.docker.com/r/ipfs/kubo/tags?name=staging-latest) always points at the `HEAD` of the [`staging`](https://github.com/stateless-minds/kubo/commits/staging/) branch
   - [`staging-YYYY-DD-MM-GITSHA`](https://hub.docker.com/r/ipfs/kubo/tags?name=staging-2) points at a specific commit from the `staging` branch
 
 ```console
@@ -169,7 +169,7 @@ From there:
 - Move kubo (`ipfs`) to your path (`install.sh` can do it for you).
 
 If you are unable to access [dist.ipfs.tech](https://dist.ipfs.tech#kubo), you can also download kubo (go-ipfs) from:
-- this project's GitHub [releases](https://github.com/ipfs/kubo/releases/latest) page
+- this project's GitHub [releases](https://github.com/stateless-minds/kubo/releases/latest) page
 - `/ipns/dist.ipfs.tech` at [dweb.link](https://dweb.link/ipns/dist.ipfs.tech#kubo) gateway
 
 #### Updating
@@ -266,7 +266,7 @@ You can also install it through the Solus software center.
 
 #### Snap
 
-No longer supported, see rationale in [kubo#8688](https://github.com/ipfs/kubo/issues/8688).
+No longer supported, see rationale in [kubo#8688](https://github.com/stateless-minds/kubo/issues/8688).
 
 #### Ubuntu PPA
 
@@ -304,7 +304,7 @@ where `<<DISTRO>>` is the codename of your Ubuntu distribution (for example, `ja
 
 #### Chocolatey
 
-No longer supported, see rationale in [kubo#9341](https://github.com/ipfs/kubo/issues/9341).
+No longer supported, see rationale in [kubo#9341](https://github.com/stateless-minds/kubo/issues/9341).
 
 #### Scoop
 
@@ -377,7 +377,7 @@ export PATH=$PATH:$GOPATH/bin
 #### Download and Compile IPFS
 
 ```
-$ git clone https://github.com/ipfs/kubo.git
+$ git clone https://github.com/stateless-minds/kubo.git
 
 $ cd kubo
 $ make install
@@ -404,7 +404,7 @@ make build GOOS=myTargetOS GOARCH=myTargetArchitecture
 - If you are interested in development, please install the development
 dependencies as well.
 - Shell command completions can be generated with one of the `ipfs commands completion` subcommands. Read [docs/command-completion.md](docs/command-completion.md) to learn more.
-- See the [misc folder](https://github.com/ipfs/kubo/tree/master/misc) for how to connect IPFS to systemd or whatever init system your distro uses.
+- See the [misc folder](https://github.com/stateless-minds/kubo/tree/master/misc) for how to connect IPFS to systemd or whatever init system your distro uses.
 
 ## Getting Started
 
@@ -438,7 +438,7 @@ If you have previously installed IPFS before and you are running into problems g
 
 Please direct general questions and help requests to our [forums](https://discuss.ipfs.tech).
 
-If you believe you've found a bug, check the [issues list](https://github.com/ipfs/kubo/issues) and, if you don't see your problem there, either come talk to us on [Matrix chat](https://docs.ipfs.tech/community/chat/), or file an issue of your own!
+If you believe you've found a bug, check the [issues list](https://github.com/stateless-minds/kubo/issues) and, if you don't see your problem there, either come talk to us on [Matrix chat](https://docs.ipfs.tech/community/chat/), or file an issue of your own!
 
 ## Packages
 
@@ -448,13 +448,13 @@ See [IPFS in GO](https://docs.ipfs.tech/reference/go/api/) documentation.
 
 Some places to get you started on the codebase:
 
-- Main file: [./cmd/ipfs/main.go](https://github.com/ipfs/kubo/blob/master/cmd/ipfs/main.go)
-- CLI Commands: [./core/commands/](https://github.com/ipfs/kubo/tree/master/core/commands)
+- Main file: [./cmd/ipfs/main.go](https://github.com/stateless-minds/kubo/blob/master/cmd/ipfs/main.go)
+- CLI Commands: [./core/commands/](https://github.com/stateless-minds/kubo/tree/master/core/commands)
 - Bitswap (the data trading engine): [go-bitswap](https://github.com/ipfs/go-bitswap)
 - libp2p
   - libp2p: https://github.com/libp2p/go-libp2p
   - DHT: https://github.com/libp2p/go-libp2p-kad-dht
-- [IPFS : The `Add` command demystified](https://github.com/ipfs/kubo/tree/master/docs/add-code-flow.md)
+- [IPFS : The `Add` command demystified](https://github.com/stateless-minds/kubo/tree/master/docs/add-code-flow.md)
 
 ### Map of Implemented Subsystems
 **WIP**: This is a high-level architecture diagram of the various sub-systems of this specific implementation. To be updated with how they interact. Anyone who has suggestions is welcome to comment [here](https://docs.google.com/drawings/d/1OVpBT2q-NtSJqlPX3buvjYhOnWfdzb85YEsM_njesME/edit) on how we can improve this!
@@ -506,5 +506,5 @@ Need help with IPFS itself? Learn where to get help and support at https://ipfs.
 
 This project is dual-licensed under Apache 2.0 and MIT terms:
 
-- Apache License, Version 2.0, ([LICENSE-APACHE](https://github.com/ipfs/kubo/blob/master/LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
-- MIT license ([LICENSE-MIT](https://github.com/ipfs/kubo/blob/master/LICENSE-MIT) or http://opensource.org/licenses/MIT)
+- Apache License, Version 2.0, ([LICENSE-APACHE](https://github.com/stateless-minds/kubo/blob/master/LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+- MIT license ([LICENSE-MIT](https://github.com/stateless-minds/kubo/blob/master/LICENSE-MIT) or http://opensource.org/licenses/MIT)

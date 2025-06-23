@@ -1,4 +1,4 @@
-<!-- Last updated during [v0.30.0 release](https://github.com/ipfs/kubo/pull/10496) -->
+<!-- Last updated during [v0.30.0 release](https://github.com/stateless-minds/kubo/pull/10496) -->
 
 # Items to do upon creating the release issue
 
@@ -22,8 +22,8 @@
 * Expected RC date: week of YYYY-MM-DD
 * 🚢 Expected final release date: YYYY-MM-DD
 * Release PR: <add link once release PR is created>
-* Accompanying PR for improving the release process: ([example](https://github.com/ipfs/kubo/pull/9391))
-* Changelog: https://github.com/ipfs/kubo/blob/master/docs/changelogs/vX.Y.md
+* Accompanying PR for improving the release process: ([example](https://github.com/stateless-minds/kubo/pull/9391))
+* Changelog: https://github.com/stateless-minds/kubo/blob/master/docs/changelogs/vX.Y.md
 
 # Items In Scope
 

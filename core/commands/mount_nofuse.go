@@ -17,8 +17,8 @@ for mounting. If you'd like to be able to mount, please use a version of
 Kubo compiled with fuse.
 
 For the latest instructions, please check the project's repository:
-  http://github.com/ipfs/kubo
-  https://github.com/ipfs/kubo/blob/master/docs/fuse.md
+  http://github.com/stateless-minds/kubo
+  https://github.com/stateless-minds/kubo/blob/master/docs/fuse.md
 `,
 	},
 }

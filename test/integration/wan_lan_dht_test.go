@@ -11,9 +11,9 @@ import (
 	"time"
 
 	"github.com/ipfs/go-cid"
-	"github.com/ipfs/kubo/core"
-	mock "github.com/ipfs/kubo/core/mock"
-	libp2p2 "github.com/ipfs/kubo/core/node/libp2p"
+	"github.com/stateless-minds/kubo/core"
+	mock "github.com/stateless-minds/kubo/core/mock"
+	libp2p2 "github.com/stateless-minds/kubo/core/node/libp2p"
 
 	testutil "github.com/libp2p/go-libp2p-testing/net"
 	corenet "github.com/libp2p/go-libp2p/core/network"

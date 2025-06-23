@@ -10,9 +10,9 @@ import (
 	"github.com/ipfs/boxo/routing/http/types"
 	"github.com/ipfs/boxo/routing/http/types/iter"
 	"github.com/ipfs/go-cid"
-	"github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/test/cli/harness"
 	"github.com/libp2p/go-libp2p/core/peer"
+	"github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/test/cli/harness"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

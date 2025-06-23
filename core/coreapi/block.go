@@ -10,13 +10,13 @@ import (
 	pin "github.com/ipfs/boxo/pinning/pinner"
 	blocks "github.com/ipfs/go-block-format"
 	cid "github.com/ipfs/go-cid"
-	coreiface "github.com/ipfs/kubo/core/coreiface"
-	caopts "github.com/ipfs/kubo/core/coreiface/options"
+	coreiface "github.com/stateless-minds/kubo/core/coreiface"
+	caopts "github.com/stateless-minds/kubo/core/coreiface/options"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	util "github.com/ipfs/kubo/blocks/blockstoreutil"
-	"github.com/ipfs/kubo/tracing"
+	util "github.com/stateless-minds/kubo/blocks/blockstoreutil"
+	"github.com/stateless-minds/kubo/tracing"
 )
 
 type BlockAPI CoreAPI

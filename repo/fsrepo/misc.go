@@ -3,8 +3,8 @@ package fsrepo
 import (
 	"os"
 
-	config "github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/misc/fsutil"
+	config "github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/misc/fsutil"
 )
 
 // BestKnownPath returns the best known fsrepo path. If the ENV override is

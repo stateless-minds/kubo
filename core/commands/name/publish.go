@@ -6,14 +6,14 @@ import (
 	"io"
 	"time"
 
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/cmdutils"
+	cmdenv "github.com/stateless-minds/kubo/core/commands/cmdenv"
+	"github.com/stateless-minds/kubo/core/commands/cmdutils"
 
 	ipns "github.com/ipfs/boxo/ipns"
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	ke "github.com/ipfs/kubo/core/commands/keyencode"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	options "github.com/ipfs/kubo/core/coreiface/options"
+	ke "github.com/stateless-minds/kubo/core/commands/keyencode"
+	iface "github.com/stateless-minds/kubo/core/coreiface"
+	options "github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 var errAllowOffline = errors.New("can't publish while offline: pass `--allow-offline` to override")

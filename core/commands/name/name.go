@@ -11,7 +11,7 @@ import (
 	"github.com/ipfs/boxo/ipns"
 	ipns_pb "github.com/ipfs/boxo/ipns/pb"
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
+	cmdenv "github.com/stateless-minds/kubo/core/commands/cmdenv"
 	"google.golang.org/protobuf/proto"
 )
 

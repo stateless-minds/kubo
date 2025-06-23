@@ -10,9 +10,9 @@ import (
 	"time"
 
 	bootstrap2 "github.com/ipfs/boxo/bootstrap"
-	"github.com/ipfs/kubo/core/coreapi"
-	mock "github.com/ipfs/kubo/core/mock"
-	"github.com/ipfs/kubo/thirdparty/unit"
+	"github.com/stateless-minds/kubo/core/coreapi"
+	mock "github.com/stateless-minds/kubo/core/mock"
+	"github.com/stateless-minds/kubo/thirdparty/unit"
 
 	"github.com/ipfs/boxo/files"
 	testutil "github.com/libp2p/go-libp2p-testing/net"

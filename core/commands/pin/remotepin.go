@@ -19,12 +19,12 @@ import (
 	cid "github.com/ipfs/go-cid"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	logging "github.com/ipfs/go-log/v2"
-	config "github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/cmdutils"
-	fsrepo "github.com/ipfs/kubo/repo/fsrepo"
 	"github.com/libp2p/go-libp2p/core/host"
 	peer "github.com/libp2p/go-libp2p/core/peer"
+	config "github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/core/commands/cmdenv"
+	"github.com/stateless-minds/kubo/core/commands/cmdutils"
+	fsrepo "github.com/stateless-minds/kubo/repo/fsrepo"
 )
 
 var log = logging.Logger("core/commands/cmdenv")
@@ -776,7 +776,7 @@ func normalizeEndpoint(endpoint string) (string, error) {
 		return "", fmt.Errorf("service endpoint must be a valid HTTP URL")
 	}
 
-	// cleanup trailing and duplicate slashes (https://github.com/ipfs/kubo/issues/7826)
+	// cleanup trailing and duplicate slashes (https://github.com/stateless-minds/kubo/issues/7826)
 	uri.Path = gopath.Clean(uri.Path)
 	uri.Path = strings.TrimSuffix(uri.Path, ".")
 	uri.Path = strings.TrimSuffix(uri.Path, "/")

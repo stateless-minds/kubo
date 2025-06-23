@@ -6,12 +6,12 @@ import (
 	"time"
 
 	logging "github.com/ipfs/go-log/v2"
-	core "github.com/ipfs/kubo/core"
-	plugin "github.com/ipfs/kubo/plugin"
 	event "github.com/libp2p/go-libp2p/core/event"
 	network "github.com/libp2p/go-libp2p/core/network"
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/libp2p/go-libp2p/core/peerstore"
+	core "github.com/stateless-minds/kubo/core"
+	plugin "github.com/stateless-minds/kubo/plugin"
 	"go.uber.org/zap"
 )
 

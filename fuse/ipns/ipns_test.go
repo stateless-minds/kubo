@@ -15,8 +15,8 @@ import (
 
 	"bazil.org/fuse"
 
-	core "github.com/ipfs/kubo/core"
-	coreapi "github.com/ipfs/kubo/core/coreapi"
+	core "github.com/stateless-minds/kubo/core"
+	coreapi "github.com/stateless-minds/kubo/core/coreapi"
 
 	fstest "bazil.org/fuse/fs/fstestutil"
 	racedet "github.com/ipfs/go-detect-race"

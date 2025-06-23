@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/cockroachdb/pebble/v2"
-	"github.com/ipfs/kubo/core/coreiface/options"
 	"github.com/libp2p/go-libp2p/core/crypto"
 	"github.com/libp2p/go-libp2p/core/peer"
+	"github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 func Init(out io.Writer, nBitsForKeypair int) (*Config, error) {

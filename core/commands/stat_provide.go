@@ -6,8 +6,8 @@ import (
 	"text/tabwriter"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	"github.com/ipfs/kubo/core/commands/cmdenv"
 	"github.com/libp2p/go-libp2p-kad-dht/fullrt"
+	"github.com/stateless-minds/kubo/core/commands/cmdenv"
 )
 
 var statProvideCmd = &cmds.Command{

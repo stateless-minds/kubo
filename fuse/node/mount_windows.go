@@ -1,7 +1,7 @@
 package node
 
 import (
-	"github.com/ipfs/kubo/core"
+	"github.com/stateless-minds/kubo/core"
 )
 
 func Mount(node *core.IpfsNode, fsdir, nsdir, mfsdir string) error {

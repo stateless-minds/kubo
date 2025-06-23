@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/ipfs/boxo/namesys"
-	"github.com/ipfs/kubo/tracing"
+	"github.com/stateless-minds/kubo/tracing"
 
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
@@ -14,7 +14,7 @@ import (
 	"github.com/ipfs/boxo/path"
 	ipfspathresolver "github.com/ipfs/boxo/path/resolver"
 	ipld "github.com/ipfs/go-ipld-format"
-	coreiface "github.com/ipfs/kubo/core/coreiface"
+	coreiface "github.com/stateless-minds/kubo/core/coreiface"
 )
 
 // ResolveNode resolves the path `p` using Unixfs resolver, gets and returns the

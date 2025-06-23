@@ -11,8 +11,8 @@ import (
 	rcmgr "github.com/libp2p/go-libp2p/p2p/host/resource-manager"
 
 	ds "github.com/ipfs/go-datastore"
-	config "github.com/ipfs/kubo/config"
 	ma "github.com/multiformats/go-multiaddr"
+	config "github.com/stateless-minds/kubo/config"
 )
 
 var ErrApiNotRunning = errors.New("api not running") //nolint

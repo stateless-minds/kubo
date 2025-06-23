@@ -69,7 +69,7 @@ test_expect_success "OPTIONS response for Gateway resource looks good" '
 '
 
 # HTTP OPTIONS Request on path → subdomain HTTP 301 redirect
-# (regression test for https://github.com/ipfs/kubo/issues/9983#issuecomment-1599673976)
+# (regression test for https://github.com/stateless-minds/kubo/issues/9983#issuecomment-1599673976)
 test_expect_success "OPTIONS to Gateway succeeds" '
   curl -svX OPTIONS -H "Origin: https://example.com" "http://localhost:$GWAY_PORT/ipfs/$thash" 2>curl_output &&
   cat curl_output

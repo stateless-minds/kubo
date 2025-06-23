@@ -6,8 +6,8 @@ import (
 	ft "github.com/ipfs/boxo/ipld/unixfs"
 	"github.com/ipfs/boxo/namesys"
 	"github.com/ipfs/boxo/path"
-	"github.com/ipfs/kubo/core"
 	ci "github.com/libp2p/go-libp2p/core/crypto"
+	"github.com/stateless-minds/kubo/core"
 )
 
 // InitializeKeyspace sets the ipns record for the given key to

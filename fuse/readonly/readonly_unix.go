@@ -20,9 +20,9 @@ import (
 	"github.com/ipfs/go-cid"
 	ipld "github.com/ipfs/go-ipld-format"
 	logging "github.com/ipfs/go-log/v2"
-	core "github.com/ipfs/kubo/core"
 	ipldprime "github.com/ipld/go-ipld-prime"
 	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
+	core "github.com/stateless-minds/kubo/core"
 )
 
 var log = logging.Logger("fuse/ipfs")

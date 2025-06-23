@@ -224,7 +224,7 @@ Default: "/yamux/1.0.0 /mplex/6.7.0"
 
 Forces [libp2p Network Resource Manager](https://github.com/libp2p/go-libp2p-resource-manager#readme)
 to be enabled (`1`) or disabled (`0`).
-When set, overrides [`Swarm.ResourceMgr.Enabled`](https://github.com/ipfs/kubo/blob/master/docs/config.md#swarmresourcemgrenabled) from the config.
+When set, overrides [`Swarm.ResourceMgr.Enabled`](https://github.com/stateless-minds/kubo/blob/master/docs/config.md#swarmresourcemgrenabled) from the config.
 
 Default: use config (not set)
 

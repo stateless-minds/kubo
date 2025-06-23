@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ipfs/kubo/config"
 	"github.com/ipshipyard/p2p-forge/client"
 	"github.com/libp2p/go-libp2p"
 	"github.com/libp2p/go-libp2p/core/metrics"
@@ -13,6 +12,7 @@ import (
 	webrtc "github.com/libp2p/go-libp2p/p2p/transport/webrtc"
 	"github.com/libp2p/go-libp2p/p2p/transport/websocket"
 	webtransport "github.com/libp2p/go-libp2p/p2p/transport/webtransport"
+	"github.com/stateless-minds/kubo/config"
 
 	"go.uber.org/fx"
 )

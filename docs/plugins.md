@@ -22,7 +22,7 @@ directory (by default `~/.ipfs/plugins`).
 ## Plugin Types
 
 Plugins can implement one or more plugin types, defined in the
-[plugin](https://godoc.org/github.com/ipfs/kubo/plugin) package.
+[plugin](https://godoc.org/github.com/stateless-minds/kubo/plugin) package.
 
 ### IPLD
 
@@ -112,10 +112,10 @@ Example:
 
 | Name                                                                            | Type      | Preloaded | Description                                    |
 |---------------------------------------------------------------------------------|-----------|-----------|------------------------------------------------|
-| [git](https://github.com/ipfs/kubo/tree/master/plugin/plugins/git)           | IPLD      | x         | An IPLD format for git objects.                |
-| [badgerds](https://github.com/ipfs/kubo/tree/master/plugin/plugins/badgerds) | Datastore | x         | A high performance but experimental datastore. |
-| [flatfs](https://github.com/ipfs/kubo/tree/master/plugin/plugins/flatfs)     | Datastore | x         | A stable filesystem-based datastore.           |
-| [levelds](https://github.com/ipfs/kubo/tree/master/plugin/plugins/levelds)   | Datastore | x         | A stable, flexible datastore backend.          |
+| [git](https://github.com/stateless-minds/kubo/tree/master/plugin/plugins/git)           | IPLD      | x         | An IPLD format for git objects.                |
+| [badgerds](https://github.com/stateless-minds/kubo/tree/master/plugin/plugins/badgerds) | Datastore | x         | A high performance but experimental datastore. |
+| [flatfs](https://github.com/stateless-minds/kubo/tree/master/plugin/plugins/flatfs)     | Datastore | x         | A stable filesystem-based datastore.           |
+| [levelds](https://github.com/stateless-minds/kubo/tree/master/plugin/plugins/levelds)   | Datastore | x         | A stable, flexible datastore backend.          |
 | [jaeger](https://github.com/ipfs/go-jaeger-plugin)                              | Tracing   |           | An opentracing backend.                        |
 
 * **Preloaded** plugins are built into the Kubo binary and do not need to be
@@ -139,7 +139,7 @@ the instructions for preloaded plugins.
 #### In-tree
 
 To build plugins included in
-[plugin/plugins](https://github.com/ipfs/kubo/tree/master/plugin/plugins),
+[plugin/plugins](https://github.com/stateless-minds/kubo/tree/master/plugin/plugins),
 run:
 
 ```bash

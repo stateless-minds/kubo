@@ -7,10 +7,10 @@ import (
 
 	"github.com/cockroachdb/pebble/v2"
 	pebbleds "github.com/ipfs/go-ds-pebble"
-	"github.com/ipfs/kubo/misc/fsutil"
-	"github.com/ipfs/kubo/plugin"
-	"github.com/ipfs/kubo/repo"
-	"github.com/ipfs/kubo/repo/fsrepo"
+	"github.com/stateless-minds/kubo/misc/fsutil"
+	"github.com/stateless-minds/kubo/plugin"
+	"github.com/stateless-minds/kubo/repo"
+	"github.com/stateless-minds/kubo/repo/fsrepo"
 )
 
 // Plugins is exported list of plugins that will be loaded.

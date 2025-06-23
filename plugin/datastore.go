@@ -1,7 +1,7 @@
 package plugin
 
 import (
-	"github.com/ipfs/kubo/repo/fsrepo"
+	"github.com/stateless-minds/kubo/repo/fsrepo"
 )
 
 // PluginDatastore is an interface that can be implemented to add handlers for

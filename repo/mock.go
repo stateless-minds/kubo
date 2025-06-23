@@ -9,8 +9,8 @@ import (
 	keystore "github.com/ipfs/boxo/keystore"
 	rcmgr "github.com/libp2p/go-libp2p/p2p/host/resource-manager"
 
-	config "github.com/ipfs/kubo/config"
 	ma "github.com/multiformats/go-multiaddr"
+	config "github.com/stateless-minds/kubo/config"
 )
 
 var errTODO = errors.New("TODO: mock repo")

@@ -10,8 +10,8 @@ import (
 	"github.com/ipfs/boxo/files"
 	"github.com/ipfs/boxo/ipns"
 	"github.com/ipfs/boxo/path"
-	coreiface "github.com/ipfs/kubo/core/coreiface"
-	opt "github.com/ipfs/kubo/core/coreiface/options"
+	coreiface "github.com/stateless-minds/kubo/core/coreiface"
+	opt "github.com/stateless-minds/kubo/core/coreiface/options"
 	"github.com/stretchr/testify/require"
 )
 

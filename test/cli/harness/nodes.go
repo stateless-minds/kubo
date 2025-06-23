@@ -3,8 +3,8 @@ package harness
 import (
 	"sync"
 
-	. "github.com/ipfs/kubo/test/cli/testutils"
 	"github.com/multiformats/go-multiaddr"
+	. "github.com/stateless-minds/kubo/test/cli/testutils"
 	"golang.org/x/sync/errgroup"
 )
 

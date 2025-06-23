@@ -1,7 +1,7 @@
 package plugin
 
 import (
-	coreiface "github.com/ipfs/kubo/core/coreiface"
+	coreiface "github.com/stateless-minds/kubo/core/coreiface"
 )
 
 // PluginDaemon is an interface for daemon plugins. These plugins will be run on

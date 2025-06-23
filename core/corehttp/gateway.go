@@ -17,12 +17,12 @@ import (
 	"github.com/ipfs/boxo/path"
 	offlineroute "github.com/ipfs/boxo/routing/offline"
 	"github.com/ipfs/go-cid"
-	version "github.com/ipfs/kubo"
-	"github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/core"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	"github.com/ipfs/kubo/core/node"
 	"github.com/libp2p/go-libp2p/core/routing"
+	version "github.com/stateless-minds/kubo"
+	"github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/core"
+	iface "github.com/stateless-minds/kubo/core/coreiface"
+	"github.com/stateless-minds/kubo/core/node"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
 )
 

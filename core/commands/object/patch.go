@@ -5,14 +5,14 @@ import (
 	"io"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	"github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/cmdutils"
+	"github.com/stateless-minds/kubo/core/commands/cmdenv"
+	"github.com/stateless-minds/kubo/core/commands/cmdutils"
 
-	"github.com/ipfs/kubo/core/coreiface/options"
+	"github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 var ObjectPatchCmd = &cmds.Command{
-	Status: cmds.Deprecated, // https://github.com/ipfs/kubo/issues/7936
+	Status: cmds.Deprecated, // https://github.com/stateless-minds/kubo/issues/7936
 	Helptext: cmds.HelpText{
 		Tagline: "Deprecated way to create a new merkledag object based on an existing one. Use MFS with 'files cp|rm' instead.",
 		ShortDescription: `
@@ -48,7 +48,7 @@ For modern use cases, use MFS with 'files' commands: 'ipfs files --help'.
 }
 
 var patchRmLinkCmd = &cmds.Command{
-	Status: cmds.Deprecated, // https://github.com/ipfs/kubo/issues/7936
+	Status: cmds.Deprecated, // https://github.com/stateless-minds/kubo/issues/7936
 	Helptext: cmds.HelpText{
 		Tagline: "Deprecated way to remove a link from dag-pb object.",
 		ShortDescription: `
@@ -98,7 +98,7 @@ const (
 )
 
 var patchAddLinkCmd = &cmds.Command{
-	Status: cmds.Deprecated, // https://github.com/ipfs/kubo/issues/7936
+	Status: cmds.Deprecated, // https://github.com/stateless-minds/kubo/issues/7936
 	Helptext: cmds.HelpText{
 		Tagline: "Deprecated way to add a link to a given dag-pb.",
 		ShortDescription: `

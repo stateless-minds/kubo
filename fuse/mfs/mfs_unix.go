@@ -18,7 +18,7 @@ import (
 	dag "github.com/ipfs/boxo/ipld/merkledag"
 	ft "github.com/ipfs/boxo/ipld/unixfs"
 	"github.com/ipfs/boxo/mfs"
-	"github.com/ipfs/kubo/core"
+	"github.com/stateless-minds/kubo/core"
 )
 
 const (

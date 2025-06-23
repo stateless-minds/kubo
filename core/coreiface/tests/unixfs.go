@@ -15,8 +15,8 @@ import (
 	"testing"
 
 	"github.com/ipfs/boxo/path"
-	coreiface "github.com/ipfs/kubo/core/coreiface"
-	"github.com/ipfs/kubo/core/coreiface/options"
+	coreiface "github.com/stateless-minds/kubo/core/coreiface"
+	"github.com/stateless-minds/kubo/core/coreiface/options"
 
 	"github.com/ipfs/boxo/files"
 	mdag "github.com/ipfs/boxo/ipld/merkledag"

@@ -9,8 +9,8 @@ import (
 	"testing"
 
 	"github.com/ipfs/boxo/ipns"
-	"github.com/ipfs/kubo/core/commands/name"
-	"github.com/ipfs/kubo/test/cli/harness"
+	"github.com/stateless-minds/kubo/core/commands/name"
+	"github.com/stateless-minds/kubo/test/cli/harness"
 	"github.com/stretchr/testify/require"
 )
 

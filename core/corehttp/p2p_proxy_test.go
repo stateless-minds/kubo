@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ipfs/kubo/thirdparty/assert"
+	"github.com/stateless-minds/kubo/thirdparty/assert"
 
 	protocol "github.com/libp2p/go-libp2p/core/protocol"
 )

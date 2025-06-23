@@ -57,7 +57,7 @@ func (n *loggingResourceManager) start(ctx context.Context) {
 				}
 
 				if len(errs) != 0 {
-					n.logger.Warnf("Learn more about potential actions to take at: https://github.com/ipfs/kubo/blob/master/docs/libp2p-resource-management.md")
+					n.logger.Warnf("Learn more about potential actions to take at: https://github.com/stateless-minds/kubo/blob/master/docs/libp2p-resource-management.md")
 				}
 
 				n.mut.Unlock()

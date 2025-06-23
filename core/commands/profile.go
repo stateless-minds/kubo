@@ -9,8 +9,8 @@ import (
 	"time"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	"github.com/ipfs/kubo/core/commands/e"
-	"github.com/ipfs/kubo/profile"
+	"github.com/stateless-minds/kubo/core/commands/e"
+	"github.com/stateless-minds/kubo/profile"
 )
 
 // time format that works in filenames on windows.
@@ -41,7 +41,7 @@ To aid in debugging, this command also attempts to include a copy of
 the running go-ipfs binary.
 
 Profiles can be examined using 'go tool pprof', some tips can be found at
-https://github.com/ipfs/kubo/blob/master/docs/debug-guide.md.
+https://github.com/stateless-minds/kubo/blob/master/docs/debug-guide.md.
 
 Privacy Notice:
 

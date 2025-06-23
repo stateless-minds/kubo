@@ -3,7 +3,7 @@ package config
 import "time"
 
 const (
-	DefaultReproviderInterval = time.Hour * 22 // https://github.com/ipfs/kubo/pull/9326
+	DefaultReproviderInterval = time.Hour * 22 // https://github.com/stateless-minds/kubo/pull/9326
 	DefaultReproviderStrategy = "all"
 )
 

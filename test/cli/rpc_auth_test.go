@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/ipfs/kubo/client/rpc/auth"
-	"github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/test/cli/harness"
+	"github.com/stateless-minds/kubo/client/rpc/auth"
+	"github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/test/cli/harness"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

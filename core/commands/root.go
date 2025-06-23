@@ -3,11 +3,11 @@ package commands
 import (
 	"errors"
 
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
-	dag "github.com/ipfs/kubo/core/commands/dag"
-	name "github.com/ipfs/kubo/core/commands/name"
-	ocmd "github.com/ipfs/kubo/core/commands/object"
-	"github.com/ipfs/kubo/core/commands/pin"
+	cmdenv "github.com/stateless-minds/kubo/core/commands/cmdenv"
+	dag "github.com/stateless-minds/kubo/core/commands/dag"
+	name "github.com/stateless-minds/kubo/core/commands/name"
+	ocmd "github.com/stateless-minds/kubo/core/commands/object"
+	"github.com/stateless-minds/kubo/core/commands/pin"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	logging "github.com/ipfs/go-log/v2"

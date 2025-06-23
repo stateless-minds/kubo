@@ -5,7 +5,7 @@ import (
 
 	"github.com/ipfs/boxo/path"
 
-	"github.com/ipfs/kubo/core/coreiface/options"
+	"github.com/stateless-minds/kubo/core/coreiface/options"
 
 	"github.com/libp2p/go-libp2p/core/peer"
 )

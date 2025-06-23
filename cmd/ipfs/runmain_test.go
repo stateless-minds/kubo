@@ -9,7 +9,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ipfs/kubo/cmd/ipfs/kubo"
+	"github.com/stateless-minds/kubo/cmd/ipfs/kubo"
 )
 
 // this abuses go so much that I felt dirty writing this code

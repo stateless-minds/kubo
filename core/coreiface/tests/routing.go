@@ -8,8 +8,8 @@ import (
 
 	"github.com/ipfs/boxo/ipns"
 	"github.com/ipfs/boxo/path"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	"github.com/ipfs/kubo/core/coreiface/options"
+	iface "github.com/stateless-minds/kubo/core/coreiface"
+	"github.com/stateless-minds/kubo/core/coreiface/options"
 	"github.com/stretchr/testify/require"
 )
 

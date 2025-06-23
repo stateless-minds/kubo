@@ -477,13 +477,13 @@ field can take one of two values:
 * `enabled` - Enable the V1+V2 service (unless the node determines that it,
   itself, isn't reachable by the public internet).
 * `legacy-v1` - **DEPRECATED** Same as `enabled` but only V1 service is enabled. Used for testing
-  during as few releases as we [transition to V2](https://github.com/ipfs/kubo/issues/10091), will be removed in the future.
+  during as few releases as we [transition to V2](https://github.com/stateless-minds/kubo/issues/10091), will be removed in the future.
 * `disabled` - Disable the service.
 
 Additional modes may be added in the future.
 
 > [!IMPORTANT]
-> We are in the progress of [rolling out AutoNAT V2](https://github.com/ipfs/kubo/issues/10091).
+> We are in the progress of [rolling out AutoNAT V2](https://github.com/stateless-minds/kubo/issues/10091).
 > Right now, by default, a publicly dialable Kubo provides both V1 and V2 service to other peers,
 > and V1 is still used by Kubo for Autorelay feature. In a future release we will remove V1 and switch all features to use V2.
 
@@ -675,7 +675,7 @@ Type: `flag`
 
 Bootstrap is an array of [multiaddrs][multiaddr] of trusted nodes that your node connects to, to fetch other nodes of the network on startup.
 
-Default: [`config.DefaultBootstrapAddresses`](https://github.com/ipfs/kubo/blob/master/config/bootstrap_peers.go)
+Default: [`config.DefaultBootstrapAddresses`](https://github.com/stateless-minds/kubo/blob/master/config/bootstrap_peers.go)
 
 Type: `array[string]` ([multiaddrs][multiaddr])
 
@@ -873,7 +873,7 @@ Toggle and configure experimental features of Kubo. Experimental features are li
 
 Options for the HTTP gateway.
 
-**NOTE:** support for `/api/v0` under the gateway path is now deprecated. It will be removed in future versions: https://github.com/ipfs/kubo/issues/10312.
+**NOTE:** support for `/api/v0` under the gateway path is now deprecated. It will be removed in future versions: https://github.com/stateless-minds/kubo/issues/10312.
 
 ### `Gateway.NoFetch`
 
@@ -923,7 +923,7 @@ as an [HTTP `/routing/v1`](https://specs.ipfs.tech/routing/http-routing-v1/) end
 Use reverse proxy to expose it on a different hostname.
 
 This endpoint can be used by other Kubo instances, as illustrated in
-[`delegated_routing_v1_http_proxy_test.go`](https://github.com/ipfs/kubo/blob/master/test/cli/delegated_routing_v1_http_proxy_test.go).
+[`delegated_routing_v1_http_proxy_test.go`](https://github.com/stateless-minds/kubo/blob/master/test/cli/delegated_routing_v1_http_proxy_test.go).
 Kubo will filter out routing results which are not actionable, for example, all
 graphsync providers will be skipped. If you need a generic pass-through, see
 standalone router implementation named [someguy](https://github.com/ipfs/someguy).
@@ -950,11 +950,11 @@ Type: `string` (url)
 
 ### `Gateway.FastDirIndexThreshold`
 
-**REMOVED**: this option is [no longer necessary](https://github.com/ipfs/kubo/pull/9481). Ignored since  [Kubo 0.18](https://github.com/ipfs/kubo/blob/master/docs/changelogs/v0.18.md).
+**REMOVED**: this option is [no longer necessary](https://github.com/stateless-minds/kubo/pull/9481). Ignored since  [Kubo 0.18](https://github.com/stateless-minds/kubo/blob/master/docs/changelogs/v0.18.md).
 
 ### `Gateway.Writable`
 
-**REMOVED**: this option no longer available as of [Kubo 0.20](https://github.com/ipfs/kubo/blob/master/docs/changelogs/v0.20.md).
+**REMOVED**: this option no longer available as of [Kubo 0.20](https://github.com/stateless-minds/kubo/blob/master/docs/changelogs/v0.20.md).
 
 We are working on developing a modern replacement. To support our efforts, please leave a comment describing your use case in [ipfs/specs#375](https://github.com/ipfs/specs/issues/375).
 
@@ -1385,7 +1385,7 @@ Maximum duration for which entries are valid in the name system cache. Applied
 to everything under `/ipns/` namespace, allows you to cap
 the [Time-To-Live (TTL)](https://specs.ipfs.tech/ipns/ipns-record/#ttl-uint64) of
 [IPNS Records](https://specs.ipfs.tech/ipns/ipns-record/)
-AND also DNSLink TXT records (when DoH-specific [`DNS.MaxCacheTTL`](https://github.com/ipfs/kubo/blob/master/docs/config.md#dnsmaxcachettl)
+AND also DNSLink TXT records (when DoH-specific [`DNS.MaxCacheTTL`](https://github.com/stateless-minds/kubo/blob/master/docs/config.md#dnsmaxcachettl)
 is not set to a lower value).
 
 When `Ipns.MaxCacheTTL` is set, it defines the upper bound limit of how long a
@@ -1617,7 +1617,7 @@ Type: `optionalInteger` (non-negative; `0` means unlimited number of workers)
 
 ## `Pubsub`
 
-**DEPRECATED**: See [#9717](https://github.com/ipfs/kubo/issues/9717)
+**DEPRECATED**: See [#9717](https://github.com/stateless-minds/kubo/issues/9717)
 
 Pubsub configures the `ipfs pubsub` subsystem. To use, it must be enabled by
 passing the `--enable-pubsub-experiment` flag to the daemon
@@ -1625,7 +1625,7 @@ or via the `Pubsub.Enabled` flag below.
 
 ### `Pubsub.Enabled`
 
-**DEPRECATED**: See [#9717](https://github.com/ipfs/kubo/issues/9717)
+**DEPRECATED**: See [#9717](https://github.com/stateless-minds/kubo/issues/9717)
 
 Enables the pubsub system.
 
@@ -1635,7 +1635,7 @@ Type: `flag`
 
 ### `Pubsub.Router`
 
-**DEPRECATED**: See [#9717](https://github.com/ipfs/kubo/issues/9717)
+**DEPRECATED**: See [#9717](https://github.com/stateless-minds/kubo/issues/9717)
 
 Sets the default router used by pubsub to route messages to peers. This can be one of:
 
@@ -1652,7 +1652,7 @@ Type: `string` (one of `"floodsub"`, `"gossipsub"`, or `""` (apply default))
 
 ### `Pubsub.DisableSigning`
 
-**DEPRECATED**: See [#9717](https://github.com/ipfs/kubo/issues/9717)
+**DEPRECATED**: See [#9717](https://github.com/stateless-minds/kubo/issues/9717)
 
 Disables message signing and signature verification. Enable this option if
 you're operating in a completely trusted network.
@@ -1667,7 +1667,7 @@ Type: `bool`
 
 ### `Pubsub.SeenMessagesTTL`
 
-**DEPRECATED**: See [#9717](https://github.com/ipfs/kubo/issues/9717)
+**DEPRECATED**: See [#9717](https://github.com/stateless-minds/kubo/issues/9717)
 
 Controls the time window within which duplicate messages, identified by Message
 ID, will be identified and won't be emitted again.
@@ -1688,7 +1688,7 @@ Type: `optionalDuration`
 
 ### `Pubsub.SeenMessagesStrategy`
 
-**DEPRECATED**: See [#9717](https://github.com/ipfs/kubo/issues/9717)
+**DEPRECATED**: See [#9717](https://github.com/stateless-minds/kubo/issues/9717)
 
 Determines how the time-to-live (TTL) countdown for deduplicating Pubsub
 messages is calculated.
@@ -1792,7 +1792,7 @@ Note: disabling content reproviding will result in other nodes on the network
 not being able to discover that you have the objects that you have. If you want
 to have this disabled and keep the network aware of what you have, you must
 manually announce your content periodically or run your own routing system
-and convince users to add it to [`Routing.DelegatedRouters`](https://github.com/ipfs/kubo/blob/master/docs/config.md#routingdelegatedrouters).
+and convince users to add it to [`Routing.DelegatedRouters`](https://github.com/stateless-minds/kubo/blob/master/docs/config.md#routingdelegatedrouters).
 
 > [!CAUTION]
 > To maintain backward-compatibility, setting `Reprovider.Interval=0` will also disable Provider system (equivalent of `Provider.Enabled=false`)
@@ -1876,7 +1876,7 @@ by leveraging [`Routing.DelegatedRouters`](#routingdelegatedrouters) HTTP endpoi
 introduced in [IPIP-337](https://github.com/ipfs/specs/pull/337)
 in addition to the Amino DHT.
 
-[Advanced routing rules](https://github.com/ipfs/kubo/blob/master/docs/delegated-routing.md) can be configured in `Routing.Routers` after setting `Routing.Type` to `custom`.
+[Advanced routing rules](https://github.com/stateless-minds/kubo/blob/master/docs/delegated-routing.md) can be configured in `Routing.Routers` after setting `Routing.Type` to `custom`.
 
 Default: `auto` (DHT + [`Routing.DelegatedRouters`](#routingdelegatedrouters))
 
@@ -1978,7 +1978,7 @@ Alternative configuration used when `Routing.Type=custom`.
 > [!WARNING]
 > **EXPERIMENTAL: `Routing.Routers` configuration may change in future release**
 >
-> Consider this advanced low-level config: Most users can simply use `Routing.Type=auto` or `autoclient` and set up basic config in user-friendly [`Routing.DelegatedRouters`](https://github.com/ipfs/kubo/blob/master/docs/config.md#routingdelegatedrouters).
+> Consider this advanced low-level config: Most users can simply use `Routing.Type=auto` or `autoclient` and set up basic config in user-friendly [`Routing.DelegatedRouters`](https://github.com/stateless-minds/kubo/blob/master/docs/config.md#routingdelegatedrouters).
 
 Allows for replacing the default routing (Amino DHT) with alternative Router
 implementations.
@@ -2045,7 +2045,7 @@ Type: `object[string->string]`
 > [!WARNING]
 > **EXPERIMENTAL: `Routing.Routers` configuration may change in future release**
 >
-> Consider this advanced low-level config: Most users can simply use `Routing.Type=auto` or `autoclient` and set up basic config in user-friendly [`Routing.DelegatedRouters`](https://github.com/ipfs/kubo/blob/master/docs/config.md#routingdelegatedrouters).
+> Consider this advanced low-level config: Most users can simply use `Routing.Type=auto` or `autoclient` and set up basic config in user-friendly [`Routing.DelegatedRouters`](https://github.com/stateless-minds/kubo/blob/master/docs/config.md#routingdelegatedrouters).
 
 The key will be the name of the method: `"provide"`, `"find-providers"`, `"find-peers"`, `"put-ipns"`, `"get-ipns"`. All methods must be added to the list.
 
@@ -2685,7 +2685,7 @@ Type: `priority`
 
 ### `Swarm.Transports.Multiplexers.Mplex`
 
-**REMOVED**: See https://github.com/ipfs/kubo/issues/9958
+**REMOVED**: See https://github.com/stateless-minds/kubo/issues/9958
 
 Support for Mplex has been [removed from Kubo and go-libp2p](https://github.com/libp2p/specs/issues/553).
 Please remove this option from your config.
@@ -2771,7 +2771,7 @@ HTTP requests for `application/vnd.ipld.raw` will be made instead of Bitswap whe
 and the HTTPS server returns HTTP 200 for the [probe path](https://specs.ipfs.tech/http-gateways/trustless-gateway/#dedicated-probe-paths).
 
 > [!IMPORTANT]
-> This feature is relatively new. Please report any issues via [Github](https://github.com/ipfs/kubo/issues/new).
+> This feature is relatively new. Please report any issues via [Github](https://github.com/stateless-minds/kubo/issues/new).
 >
 > Important notes:
 > - TLS and HTTP/2 are required. For privacy reasons, and to maintain feature-parity with browsers, unencrypted `http://` providers are ignored and not used.
@@ -3025,10 +3025,10 @@ documented in `ipfs config profile --help`.
 ### `server` profile
 
 Disables local [`Discovery.MDNS`](#discoverymdns), [turns off uPnP NAT port mapping](#swarmdisablenatportmap),  and blocks connections to
-IPv4 and IPv6 prefixes that are [private, local only, or unrouteable](https://github.com/ipfs/kubo/blob/b71cf0d15904bdef21fe2eee5f1118a274309a4d/config/profile.go#L24-L43).
+IPv4 and IPv6 prefixes that are [private, local only, or unrouteable](https://github.com/stateless-minds/kubo/blob/b71cf0d15904bdef21fe2eee5f1118a274309a4d/config/profile.go#L24-L43).
 
 Recommended when running IPFS on machines with public IPv4 addresses (no NAT, no uPnP)
-at providers that interpret local IPFS discovery and traffic as netscan abuse ([example](https://github.com/ipfs/kubo/issues/10327)).
+at providers that interpret local IPFS discovery and traffic as netscan abuse ([example](https://github.com/stateless-minds/kubo/issues/10327)).
 
 ### `randomports` profile
 
@@ -3169,7 +3169,7 @@ Disables [Reprovider](#reprovider) system (and announcing to Amino DHT).
 
 Makes UnixFS import (`ipfs add`) produce legacy CIDv0 with no raw leaves, sha2-256 and 256 KiB chunks.
 
-See <https://github.com/ipfs/kubo/blob/master/config/profile.go> for exact [`Import.*`](#import) settings.
+See <https://github.com/stateless-minds/kubo/blob/master/config/profile.go> for exact [`Import.*`](#import) settings.
 
 > [!NOTE]
 > This profile is provided for legacy users and should not be used for new projects.
@@ -3180,12 +3180,12 @@ Makes UnixFS import (`ipfs add`) produce modern CIDv1 with raw leaves, sha2-256
 and 1 MiB chunks (max 174 links per file, 256 per HAMT node, switch dir to HAMT
 above 256KiB).
 
-See <https://github.com/ipfs/kubo/blob/master/config/profile.go> for exact [`Import.*`](#import) settings.
+See <https://github.com/stateless-minds/kubo/blob/master/config/profile.go> for exact [`Import.*`](#import) settings.
 
 > [!NOTE]
 > [`Import.*`](#import) settings applied by this profile MAY change in future release. Provided for testing purposes.
 >
-> Follow [kubo#4143](https://github.com/ipfs/kubo/issues/4143) for more details,
+> Follow [kubo#4143](https://github.com/stateless-minds/kubo/issues/4143) for more details,
 > and provide feedback in [discuss.ipfs.tech/t/should-we-profile-cids](https://discuss.ipfs.tech/t/should-we-profile-cids/18507) or [ipfs/specs#499](https://github.com/ipfs/specs/pull/499).
 
 ### `test-cid-v1-wide` profile
@@ -3194,12 +3194,12 @@ Makes UnixFS import (`ipfs add`) produce modern CIDv1 with raw leaves, sha2-256
 and 1 MiB chunks and wider file DAGs (max 1024 links per every node type,
 switch dir to HAMT above 1MiB).
 
-See <https://github.com/ipfs/kubo/blob/master/config/profile.go> for exact [`Import.*`](#import) settings.
+See <https://github.com/stateless-minds/kubo/blob/master/config/profile.go> for exact [`Import.*`](#import) settings.
 
 > [!NOTE]
 > [`Import.*`](#import) settings applied by this profile MAY change in future release. Provided for testing purposes.
 >
-> Follow [kubo#4143](https://github.com/ipfs/kubo/issues/4143) for more details,
+> Follow [kubo#4143](https://github.com/stateless-minds/kubo/issues/4143) for more details,
 > and provide feedback in [discuss.ipfs.tech/t/should-we-profile-cids](https://discuss.ipfs.tech/t/should-we-profile-cids/18507) or [ipfs/specs#499](https://github.com/ipfs/specs/pull/499).
 
 ## Types

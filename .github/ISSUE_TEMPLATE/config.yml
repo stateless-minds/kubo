@@ -4,10 +4,10 @@ contact_links:
    url: https://ipfs.tech/help
    about: All information about how and where to get help on IPFS.
  - name: Kubo configuration reference
-   url: https://github.com/ipfs/kubo/blob/master/docs/config.md#readme
+   url: https://github.com/stateless-minds/kubo/blob/master/docs/config.md#readme
    about: Documentation on the different configuration settings
  - name: Kubo experimental features docs
-   url: https://github.com/ipfs/kubo/blob/master/docs/experimental-features.md#readme
+   url: https://github.com/stateless-minds/kubo/blob/master/docs/experimental-features.md#readme
    about: Documentation on Private Networks, Filestore and other experimental features.
  - name: Kubo RPC API Reference
    url: https://docs.ipfs.tech/reference/kubo/rpc/

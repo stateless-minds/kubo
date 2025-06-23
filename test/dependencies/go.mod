@@ -1,8 +1,8 @@
-module github.com/ipfs/kubo/test/dependencies
+module github.com/stateless-minds/kubo/test/dependencies
 
 go 1.24
 
-replace github.com/ipfs/kubo => ../../
+replace github.com/stateless-minds/kubo => ../../
 
 require (
 	github.com/Kubuxu/gocovmerge v0.0.0-20161216165753-7ecaa51963cd
@@ -137,7 +137,7 @@ require (
 	github.com/ipfs/go-ipld-format v0.6.1 // indirect
 	github.com/ipfs/go-ipld-legacy v0.2.1 // indirect
 	github.com/ipfs/go-metrics-interface v0.3.0 // indirect
-	github.com/ipfs/kubo v0.31.0 // indirect
+	github.com/stateless-minds/kubo v0.31.0 // indirect
 	github.com/ipld/go-codec-dagpb v1.7.0 // indirect
 	github.com/ipld/go-ipld-prime v0.21.0 // indirect
 	github.com/ipshipyard/p2p-forge v0.5.2-0.20250616211529-2c25ee655b22 // indirect

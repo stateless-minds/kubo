@@ -11,8 +11,8 @@ import (
 	pin "github.com/ipfs/boxo/pinning/pinner"
 	provider "github.com/ipfs/boxo/provider"
 	"github.com/ipfs/go-cid"
-	"github.com/ipfs/kubo/repo"
-	irouting "github.com/ipfs/kubo/routing"
+	"github.com/stateless-minds/kubo/repo"
+	irouting "github.com/stateless-minds/kubo/routing"
 	"go.uber.org/fx"
 )
 
@@ -81,7 +81,7 @@ size of 10TiB, it would take %v to provide the complete set.
 ⏰ The total provide time needs to stay under your reprovide interval (%v) to prevent falling behind!
 
 💡 Consider enabling the Accelerated DHT to enhance your system performance. See:
-https://github.com/ipfs/kubo/blob/master/docs/config.md#routingaccelerateddhtclient`,
+https://github.com/stateless-minds/kubo/blob/master/docs/config.md#routingaccelerateddhtclient`,
 										keysProvided, avgProvideSpeed, avgProvideSpeed*probableBigBlockstore, reprovideInterval)
 									return false
 								}
@@ -108,7 +108,7 @@ We observed that you recently provided %d keys at an average rate of %v per key.
 ⏰ The total provide time needs to stay under your reprovide interval (%v) to prevent falling behind!
 
 💡 Consider enabling the Accelerated DHT to enhance your reprovide throughput. See:
-https://github.com/ipfs/kubo/blob/master/docs/config.md#routingaccelerateddhtclient`,
+https://github.com/stateless-minds/kubo/blob/master/docs/config.md#routingaccelerateddhtclient`,
 							keysProvided, avgProvideSpeed, count, avgProvideSpeed*time.Duration(count), reprovideInterval)
 					}
 					return false

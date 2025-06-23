@@ -6,7 +6,7 @@ import (
 	"text/tabwriter"
 	"time"
 
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
+	cmdenv "github.com/stateless-minds/kubo/core/commands/cmdenv"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	dht "github.com/libp2p/go-libp2p-kad-dht"
