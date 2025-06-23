@@ -10,13 +10,13 @@ import (
 	"runtime"
 	"strings"
 
-	config "github.com/ipfs/kubo/config"
 	"github.com/ipld/go-ipld-prime/multicodec"
+	config "github.com/stateless-minds/kubo/config"
 
-	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/coreapi"
-	plugin "github.com/ipfs/kubo/plugin"
-	fsrepo "github.com/ipfs/kubo/repo/fsrepo"
+	"github.com/stateless-minds/kubo/core"
+	"github.com/stateless-minds/kubo/core/coreapi"
+	plugin "github.com/stateless-minds/kubo/plugin"
+	fsrepo "github.com/stateless-minds/kubo/repo/fsrepo"
 
 	logging "github.com/ipfs/go-log/v2"
 	opentracing "github.com/opentracing/opentracing-go"

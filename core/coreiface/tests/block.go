@@ -9,9 +9,9 @@ import (
 
 	"github.com/ipfs/boxo/path"
 	ipld "github.com/ipfs/go-ipld-format"
-	coreiface "github.com/ipfs/kubo/core/coreiface"
-	opt "github.com/ipfs/kubo/core/coreiface/options"
 	mh "github.com/multiformats/go-multihash"
+	coreiface "github.com/stateless-minds/kubo/core/coreiface"
+	opt "github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 var (

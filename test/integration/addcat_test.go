@@ -15,13 +15,13 @@ import (
 	"github.com/ipfs/boxo/files"
 	logging "github.com/ipfs/go-log/v2"
 	"github.com/ipfs/go-test/random"
-	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/coreapi"
-	mock "github.com/ipfs/kubo/core/mock"
-	"github.com/ipfs/kubo/thirdparty/unit"
 	testutil "github.com/libp2p/go-libp2p-testing/net"
 	"github.com/libp2p/go-libp2p/core/peer"
 	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"
+	"github.com/stateless-minds/kubo/core"
+	"github.com/stateless-minds/kubo/core/coreapi"
+	mock "github.com/stateless-minds/kubo/core/mock"
+	"github.com/stateless-minds/kubo/thirdparty/unit"
 )
 
 var log = logging.Logger("epictest")

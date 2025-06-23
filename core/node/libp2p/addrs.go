@@ -8,13 +8,13 @@ import (
 	"time"
 
 	logging "github.com/ipfs/go-log/v2"
-	version "github.com/ipfs/kubo"
-	"github.com/ipfs/kubo/config"
 	p2pforge "github.com/ipshipyard/p2p-forge/client"
 	"github.com/libp2p/go-libp2p"
 	"github.com/libp2p/go-libp2p/core/host"
 	p2pbhost "github.com/libp2p/go-libp2p/p2p/host/basic"
 	ma "github.com/multiformats/go-multiaddr"
+	version "github.com/stateless-minds/kubo"
+	"github.com/stateless-minds/kubo/config"
 	mamask "github.com/whyrusleeping/multiaddr-filter"
 
 	"github.com/caddyserver/certmagic"

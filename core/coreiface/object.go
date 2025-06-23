@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/ipfs/boxo/path"
-	"github.com/ipfs/kubo/core/coreiface/options"
+	"github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 // ChangeType denotes type of change in ObjectChange

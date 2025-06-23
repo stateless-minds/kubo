@@ -5,8 +5,8 @@
 package mfs
 
 import (
-	core "github.com/ipfs/kubo/core"
-	mount "github.com/ipfs/kubo/fuse/mount"
+	core "github.com/stateless-minds/kubo/core"
+	mount "github.com/stateless-minds/kubo/fuse/mount"
 )
 
 // Mount mounts MFS at a given location, and returns a mount.Mount instance.

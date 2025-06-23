@@ -4,7 +4,7 @@ import (
 	"errors"
 	"os"
 
-	"github.com/ipfs/kubo/config"
+	"github.com/stateless-minds/kubo/config"
 
 	"github.com/libp2p/go-libp2p"
 	"github.com/libp2p/go-libp2p/p2p/muxer/yamux"

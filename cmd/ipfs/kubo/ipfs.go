@@ -1,7 +1,7 @@
 package kubo
 
 import (
-	commands "github.com/ipfs/kubo/core/commands"
+	commands "github.com/stateless-minds/kubo/core/commands"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
 )

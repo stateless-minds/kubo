@@ -29,7 +29,7 @@ In order to complete this tutorial, you will need:
 Download Kubo and jump into the example folder:
 
 ```console
-$ git clone https://github.com/ipfs/kubo.git
+$ git clone https://github.com/stateless-minds/kubo.git
 $ cd kubo/docs/examples/kubo-as-a-library
 ```
 

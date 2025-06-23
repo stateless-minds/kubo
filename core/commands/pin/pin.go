@@ -15,13 +15,13 @@ import (
 	cid "github.com/ipfs/go-cid"
 	cidenc "github.com/ipfs/go-cidutil/cidenc"
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	coreiface "github.com/ipfs/kubo/core/coreiface"
-	options "github.com/ipfs/kubo/core/coreiface/options"
+	coreiface "github.com/stateless-minds/kubo/core/coreiface"
+	options "github.com/stateless-minds/kubo/core/coreiface/options"
 
-	core "github.com/ipfs/kubo/core"
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/cmdutils"
-	e "github.com/ipfs/kubo/core/commands/e"
+	core "github.com/stateless-minds/kubo/core"
+	cmdenv "github.com/stateless-minds/kubo/core/commands/cmdenv"
+	"github.com/stateless-minds/kubo/core/commands/cmdutils"
+	e "github.com/stateless-minds/kubo/core/commands/e"
 )
 
 var PinCmd = &cmds.Command{

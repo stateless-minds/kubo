@@ -7,7 +7,7 @@ import (
 	"net/http"
 
 	logging "github.com/ipfs/go-log/v2"
-	core "github.com/ipfs/kubo/core"
+	core "github.com/stateless-minds/kubo/core"
 )
 
 func LogOption() ServeOption {

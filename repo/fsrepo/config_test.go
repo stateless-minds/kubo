@@ -5,10 +5,10 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ipfs/kubo/plugin/loader"
-	"github.com/ipfs/kubo/repo/fsrepo"
+	"github.com/stateless-minds/kubo/plugin/loader"
+	"github.com/stateless-minds/kubo/repo/fsrepo"
 
-	"github.com/ipfs/kubo/config"
+	"github.com/stateless-minds/kubo/config"
 )
 
 // note: to test sorting of the mountpoints in the disk spec they are

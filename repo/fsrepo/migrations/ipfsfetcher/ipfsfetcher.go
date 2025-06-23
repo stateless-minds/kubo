@@ -13,15 +13,15 @@ import (
 
 	"github.com/ipfs/boxo/files"
 	"github.com/ipfs/boxo/path"
-	"github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/coreapi"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	"github.com/ipfs/kubo/core/coreiface/options"
-	"github.com/ipfs/kubo/core/node/libp2p"
-	"github.com/ipfs/kubo/repo/fsrepo"
-	"github.com/ipfs/kubo/repo/fsrepo/migrations"
 	peer "github.com/libp2p/go-libp2p/core/peer"
+	"github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/core"
+	"github.com/stateless-minds/kubo/core/coreapi"
+	iface "github.com/stateless-minds/kubo/core/coreiface"
+	"github.com/stateless-minds/kubo/core/coreiface/options"
+	"github.com/stateless-minds/kubo/core/node/libp2p"
+	"github.com/stateless-minds/kubo/repo/fsrepo"
+	"github.com/stateless-minds/kubo/repo/fsrepo/migrations"
 )
 
 const (

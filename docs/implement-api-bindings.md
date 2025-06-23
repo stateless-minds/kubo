@@ -28,7 +28,7 @@ handled for you by writes to the request body blocking.)
 ## API Transports
 
 Like with everything else, IPFS aims to be flexible regarding the API transports.
-Currently, the [kubo](https://github.com/ipfs/kubo) implementation supports
+Currently, the [kubo](https://github.com/stateless-minds/kubo) implementation supports
 both an in-process API and an HTTP API. More can be added easily, by mapping the
 API functions over a transport. (This is similar to how gRPC is also _mapped on
 top of transports_, like HTTP).
@@ -62,7 +62,7 @@ In HTTP, our API layering uses a REST-like mapping, where:
 
 There is a "standard IPFS API" which is currently defined as "all the commands
 exposed by the kubo implementation". There are auto-generated [API Docs](https://ipfs.io/docs/api/).
-You can Also see [a listing here](https://github.com/ipfs/kubo/blob/94b832df861728c65e912935641d08880c341e0a/core/commands/root.go#L96-L130), or get a list of
+You can Also see [a listing here](https://github.com/stateless-minds/kubo/blob/94b832df861728c65e912935641d08880c341e0a/core/commands/root.go#L96-L130), or get a list of
 commands by running `ipfs commands` locally.
 
 ## Implementing bindings for the HTTP API
@@ -85,7 +85,7 @@ implementation is very concise, and easy to follow.
 
 Despite all the generalization spoken about above, the IPFS API is actually very
 simple. You can inspect all the requests made with `nc` and the `--api` option
-(as of [this PR](https://github.com/ipfs/kubo/pull/1598), or `0.3.8`):
+(as of [this PR](https://github.com/stateless-minds/kubo/pull/1598), or `0.3.8`):
 
 ```sh
 > nc -l 5002 &

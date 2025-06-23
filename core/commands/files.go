@@ -14,9 +14,9 @@ import (
 	"time"
 
 	humanize "github.com/dustin/go-humanize"
-	"github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/commands/cmdenv"
+	"github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/core"
+	"github.com/stateless-minds/kubo/core/commands/cmdenv"
 
 	bservice "github.com/ipfs/boxo/blockservice"
 	offline "github.com/ipfs/boxo/exchange/offline"
@@ -29,8 +29,8 @@ import (
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	ipld "github.com/ipfs/go-ipld-format"
 	logging "github.com/ipfs/go-log/v2"
-	iface "github.com/ipfs/kubo/core/coreiface"
 	mh "github.com/multiformats/go-multihash"
+	iface "github.com/stateless-minds/kubo/core/coreiface"
 )
 
 var flog = logging.Logger("cmds/files")
@@ -480,7 +480,7 @@ being GC'ed.
 		}
 
 		// Sanity-check: ensure root CID is a valid UnixFS (dag-pb or raw block)
-		// Context: https://github.com/ipfs/kubo/issues/10331
+		// Context: https://github.com/stateless-minds/kubo/issues/10331
 		srcCidType := node.Cid().Type()
 		switch srcCidType {
 		case cid.Raw:

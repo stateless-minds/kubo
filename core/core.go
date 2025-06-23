@@ -51,13 +51,13 @@ import (
 	"github.com/ipfs/boxo/namesys"
 	ipnsrp "github.com/ipfs/boxo/namesys/republisher"
 	"github.com/ipfs/boxo/peering"
-	"github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/core/node"
-	"github.com/ipfs/kubo/core/node/libp2p"
-	"github.com/ipfs/kubo/fuse/mount"
-	"github.com/ipfs/kubo/p2p"
-	"github.com/ipfs/kubo/repo"
-	irouting "github.com/ipfs/kubo/routing"
+	"github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/core/node"
+	"github.com/stateless-minds/kubo/core/node/libp2p"
+	"github.com/stateless-minds/kubo/fuse/mount"
+	"github.com/stateless-minds/kubo/p2p"
+	"github.com/stateless-minds/kubo/repo"
+	irouting "github.com/stateless-minds/kubo/routing"
 )
 
 var log = logging.Logger("core")

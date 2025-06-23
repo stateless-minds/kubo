@@ -6,7 +6,7 @@ import (
 	"github.com/libp2p/go-libp2p/core/host"
 	"go.uber.org/fx"
 
-	"github.com/ipfs/kubo/core/node/helpers"
+	"github.com/stateless-minds/kubo/core/node/helpers"
 )
 
 func FloodSub(pubsubOptions ...pubsub.Option) interface{} {

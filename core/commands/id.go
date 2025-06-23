@@ -9,18 +9,18 @@ import (
 	"sort"
 	"strings"
 
-	version "github.com/ipfs/kubo"
-	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/commands/cmdenv"
+	version "github.com/stateless-minds/kubo"
+	"github.com/stateless-minds/kubo/core"
+	"github.com/stateless-minds/kubo/core/commands/cmdenv"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	ke "github.com/ipfs/kubo/core/commands/keyencode"
 	kb "github.com/libp2p/go-libp2p-kbucket"
 	ic "github.com/libp2p/go-libp2p/core/crypto"
 	"github.com/libp2p/go-libp2p/core/host"
 	"github.com/libp2p/go-libp2p/core/peer"
 	pstore "github.com/libp2p/go-libp2p/core/peerstore"
 	"github.com/libp2p/go-libp2p/core/protocol"
+	ke "github.com/stateless-minds/kubo/core/commands/keyencode"
 )
 
 const offlineIDErrorMessage = "'ipfs id' cannot query information on remote peers without a running daemon; if you only want to convert --peerid-base, pass --offline option"

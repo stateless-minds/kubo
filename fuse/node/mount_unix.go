@@ -9,11 +9,11 @@ import (
 	"strings"
 	"sync"
 
-	core "github.com/ipfs/kubo/core"
-	ipns "github.com/ipfs/kubo/fuse/ipns"
-	mfs "github.com/ipfs/kubo/fuse/mfs"
-	mount "github.com/ipfs/kubo/fuse/mount"
-	rofs "github.com/ipfs/kubo/fuse/readonly"
+	core "github.com/stateless-minds/kubo/core"
+	ipns "github.com/stateless-minds/kubo/fuse/ipns"
+	mfs "github.com/stateless-minds/kubo/fuse/mfs"
+	mount "github.com/stateless-minds/kubo/fuse/mount"
+	rofs "github.com/stateless-minds/kubo/fuse/readonly"
 
 	logging "github.com/ipfs/go-log/v2"
 )

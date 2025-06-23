@@ -1,6 +1,6 @@
 package plugin
 
-import "github.com/ipfs/kubo/core"
+import "github.com/stateless-minds/kubo/core"
 
 // PluginDaemonInternal is an interface for daemon plugins. These plugins will be run on
 // the daemon and will be given a direct access to the IpfsNode.

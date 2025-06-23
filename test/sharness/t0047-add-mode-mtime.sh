@@ -44,7 +44,7 @@ mk_dir() {
 }
 
 # force umask for deterministic mode on files created via touch
-# (https://github.com/orgs/community/discussions/40876, https://github.com/ipfs/kubo/pull/10478/#discussion_r1717515514)
+# (https://github.com/orgs/community/discussions/40876, https://github.com/stateless-minds/kubo/pull/10478/#discussion_r1717515514)
 umask 022
 
 FIXTURESDIR="$(mk_dir fixtures)"

@@ -9,14 +9,14 @@ import (
 	"text/tabwriter"
 	"time"
 
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/cmdutils"
+	cmdenv "github.com/stateless-minds/kubo/core/commands/cmdenv"
+	"github.com/stateless-minds/kubo/core/commands/cmdutils"
 
 	unixfs "github.com/ipfs/boxo/ipld/unixfs"
 	unixfs_pb "github.com/ipfs/boxo/ipld/unixfs/pb"
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	options "github.com/ipfs/kubo/core/coreiface/options"
+	iface "github.com/stateless-minds/kubo/core/coreiface"
+	options "github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 // LsLink contains printable data for a single ipld link in ls output

@@ -14,9 +14,9 @@ import (
 	unixfs_pb "github.com/ipfs/boxo/ipld/unixfs/pb"
 	"github.com/ipfs/boxo/path"
 	"github.com/ipfs/go-cid"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	caopts "github.com/ipfs/kubo/core/coreiface/options"
 	mh "github.com/multiformats/go-multihash"
+	iface "github.com/stateless-minds/kubo/core/coreiface"
+	caopts "github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 type addEvent struct {

@@ -8,11 +8,11 @@ import (
 	"net/http"
 	"sort"
 
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
 	mbase "github.com/multiformats/go-multibase"
+	cmdenv "github.com/stateless-minds/kubo/core/commands/cmdenv"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	options "github.com/ipfs/kubo/core/coreiface/options"
+	options "github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 var PubsubCmd = &cmds.Command{
@@ -23,7 +23,7 @@ var PubsubCmd = &cmds.Command{
 ipfs pubsub allows you to publish messages to a given topic, and also to
 subscribe to new messages on a given topic.
 
-DEPRECATED FEATURE (see https://github.com/ipfs/kubo/issues/9717)
+DEPRECATED FEATURE (see https://github.com/stateless-minds/kubo/issues/9717)
 
   It is not intended in its current state to be used in a production
   environment.  To use, the daemon must be run with
@@ -52,7 +52,7 @@ var PubsubSubCmd = &cmds.Command{
 		ShortDescription: `
 ipfs pubsub sub subscribes to messages on a given topic.
 
-DEPRECATED FEATURE (see https://github.com/ipfs/kubo/issues/9717)
+DEPRECATED FEATURE (see https://github.com/stateless-minds/kubo/issues/9717)
 
   It is not intended in its current state to be used in a production
   environment.  To use, the daemon must be run with
@@ -152,7 +152,7 @@ var PubsubPubCmd = &cmds.Command{
 ipfs pubsub pub publishes a message to a specified topic.
 It reads binary data from stdin or a file.
 
-DEPRECATED FEATURE (see https://github.com/ipfs/kubo/issues/9717)
+DEPRECATED FEATURE (see https://github.com/stateless-minds/kubo/issues/9717)
 
   It is not intended in its current state to be used in a production
   environment.  To use, the daemon must be run with
@@ -207,7 +207,7 @@ var PubsubLsCmd = &cmds.Command{
 		ShortDescription: `
 ipfs pubsub ls lists out the names of topics you are currently subscribed to.
 
-DEPRECATED FEATURE (see https://github.com/ipfs/kubo/issues/9717)
+DEPRECATED FEATURE (see https://github.com/stateless-minds/kubo/issues/9717)
 
   It is not intended in its current state to be used in a production
   environment.  To use, the daemon must be run with
@@ -281,7 +281,7 @@ ipfs pubsub peers with no arguments lists out the pubsub peers you are
 currently connected to. If given a topic, it will list connected peers who are
 subscribed to the named topic.
 
-DEPRECATED FEATURE (see https://github.com/ipfs/kubo/issues/9717)
+DEPRECATED FEATURE (see https://github.com/stateless-minds/kubo/issues/9717)
 
   It is not intended in its current state to be used in a production
   environment.  To use, the daemon must be run with
@@ -336,7 +336,7 @@ TOPIC AND DATA ENCODING
 
 // TODO: move to cmdenv?
 // Encode binary data to be passed as multibase string in URL arguments.
-// (avoiding issues described in https://github.com/ipfs/kubo/issues/7939)
+// (avoiding issues described in https://github.com/stateless-minds/kubo/issues/7939)
 func urlArgsEncoder(req *cmds.Request, env cmds.Environment) error {
 	encoder, _ := mbase.EncoderByName("base64url")
 	for n, arg := range req.Arguments {
@@ -346,7 +346,7 @@ func urlArgsEncoder(req *cmds.Request, env cmds.Environment) error {
 }
 
 // Decode binary data passed as multibase string in URL arguments.
-// (avoiding issues described in https://github.com/ipfs/kubo/issues/7939)
+// (avoiding issues described in https://github.com/stateless-minds/kubo/issues/7939)
 func urlArgsDecoder(req *cmds.Request, env cmds.Environment) error {
 	for n, arg := range req.Arguments {
 		encoding, data, err := mbase.Decode(arg)
@@ -355,7 +355,7 @@ func urlArgsDecoder(req *cmds.Request, env cmds.Environment) error {
 		}
 
 		// Enforce URL-safe encoding is used for data passed via URL arguments
-		// - without this we get data corruption similar to https://github.com/ipfs/kubo/issues/7939
+		// - without this we get data corruption similar to https://github.com/stateless-minds/kubo/issues/7939
 		// - we can't just deny base64, because there may be other bases that
 		//   are not URL-safe – better to force base64url which is known to be
 		//   safe in URL context

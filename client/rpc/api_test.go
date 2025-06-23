@@ -12,10 +12,10 @@ import (
 	"time"
 
 	"github.com/ipfs/boxo/path"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	"github.com/ipfs/kubo/core/coreiface/tests"
-	"github.com/ipfs/kubo/test/cli/harness"
 	ma "github.com/multiformats/go-multiaddr"
+	iface "github.com/stateless-minds/kubo/core/coreiface"
+	"github.com/stateless-minds/kubo/core/coreiface/tests"
+	"github.com/stateless-minds/kubo/test/cli/harness"
 	"go.uber.org/multierr"
 )
 

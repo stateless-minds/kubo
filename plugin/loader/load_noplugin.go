@@ -6,7 +6,7 @@ package loader
 import (
 	"errors"
 
-	iplugin "github.com/ipfs/kubo/plugin"
+	iplugin "github.com/stateless-minds/kubo/plugin"
 )
 
 func init() {

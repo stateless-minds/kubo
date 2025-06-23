@@ -470,7 +470,7 @@ test_add_cat_file() {
   '
 
   # confirm -w and --to-files are exclusive
-  # context: https://github.com/ipfs/kubo/issues/10611
+  # context: https://github.com/stateless-minds/kubo/issues/10611
   test_expect_success "ipfs add -r -w dir --to-files /mfs/subdir5/ errors (-w and --to-files are exclusive)" '
     ipfs files mkdir -p /mfs/subdir5 &&
     test_expect_code 1 ipfs add -r -w test --to-files /mfs/subdir5/ >actual 2>&1 &&

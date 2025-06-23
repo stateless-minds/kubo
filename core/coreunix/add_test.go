@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/gc"
-	"github.com/ipfs/kubo/repo"
+	"github.com/stateless-minds/kubo/core"
+	"github.com/stateless-minds/kubo/gc"
+	"github.com/stateless-minds/kubo/repo"
 
 	"github.com/ipfs/boxo/blockservice"
 	blockstore "github.com/ipfs/boxo/blockstore"
@@ -23,8 +23,8 @@ import (
 	"github.com/ipfs/go-cid"
 	"github.com/ipfs/go-datastore"
 	syncds "github.com/ipfs/go-datastore/sync"
-	config "github.com/ipfs/kubo/config"
-	coreiface "github.com/ipfs/kubo/core/coreiface"
+	config "github.com/stateless-minds/kubo/config"
+	coreiface "github.com/stateless-minds/kubo/core/coreiface"
 )
 
 const testPeerID = "QmTFauExutTsy4XP6JbMFcw2Wa9645HJt2bTqL6qYDCKfe"

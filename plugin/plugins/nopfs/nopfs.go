@@ -6,9 +6,9 @@ import (
 
 	"github.com/ipfs-shipyard/nopfs"
 	"github.com/ipfs-shipyard/nopfs/ipfs"
-	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/node"
-	"github.com/ipfs/kubo/plugin"
+	"github.com/stateless-minds/kubo/core"
+	"github.com/stateless-minds/kubo/core/node"
+	"github.com/stateless-minds/kubo/plugin"
 	"go.uber.org/fx"
 )
 

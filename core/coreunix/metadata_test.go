@@ -11,7 +11,7 @@ import (
 	ft "github.com/ipfs/boxo/ipld/unixfs"
 	importer "github.com/ipfs/boxo/ipld/unixfs/importer"
 	uio "github.com/ipfs/boxo/ipld/unixfs/io"
-	core "github.com/ipfs/kubo/core"
+	core "github.com/stateless-minds/kubo/core"
 
 	bstore "github.com/ipfs/boxo/blockstore"
 	chunker "github.com/ipfs/boxo/chunker"

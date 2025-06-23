@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/ipfs/boxo/path"
-	coreiface "github.com/ipfs/kubo/core/coreiface"
+	coreiface "github.com/stateless-minds/kubo/core/coreiface"
 
 	ipldcbor "github.com/ipfs/go-ipld-cbor"
 	ipld "github.com/ipfs/go-ipld-format"

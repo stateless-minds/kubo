@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/core/commands/cmdenv"
+	"github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/core/commands/cmdenv"
 
 	"github.com/cheggaaa/pb"
 	"github.com/ipfs/boxo/files"
@@ -18,9 +18,9 @@ import (
 	"github.com/ipfs/boxo/path"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	ipld "github.com/ipfs/go-ipld-format"
-	coreiface "github.com/ipfs/kubo/core/coreiface"
-	"github.com/ipfs/kubo/core/coreiface/options"
 	mh "github.com/multiformats/go-multihash"
+	coreiface "github.com/stateless-minds/kubo/core/coreiface"
+	"github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 // ErrDepthLimitExceeded indicates that the max depth has been exceeded.
@@ -147,7 +147,7 @@ defaults of 'ipfs add' to remain the same in future Kubo releases, or for other
 IPFS software to use the same import parameters as Kubo.
 
 Use Import.* configuration options to override global implicit defaults:
-https://github.com/ipfs/kubo/blob/master/docs/config.md#import
+https://github.com/stateless-minds/kubo/blob/master/docs/config.md#import
 
 If you need to back up or transport content-addressed data using a non-IPFS
 medium, CID can be preserved with CAR files.

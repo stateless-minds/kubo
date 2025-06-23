@@ -10,8 +10,8 @@ import (
 	"github.com/ipfs/boxo/ipld/merkledag"
 	uio "github.com/ipfs/boxo/ipld/unixfs/io"
 	"github.com/ipfs/boxo/path"
-	"github.com/ipfs/kubo/core/coreiface/options"
 	"github.com/ipld/go-ipld-prime"
+	"github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 func TestPathUnixFSHAMTPartial(t *testing.T) {

@@ -7,10 +7,10 @@ import (
 
 	"github.com/ipfs/boxo/ipns"
 	"github.com/ipfs/go-cid"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	opt "github.com/ipfs/kubo/core/coreiface/options"
 	"github.com/libp2p/go-libp2p/core/peer"
 	mbase "github.com/multiformats/go-multibase"
+	iface "github.com/stateless-minds/kubo/core/coreiface"
+	opt "github.com/stateless-minds/kubo/core/coreiface/options"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

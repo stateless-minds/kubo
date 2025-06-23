@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ipfs/kubo/misc/fsutil"
+	"github.com/stateless-minds/kubo/misc/fsutil"
 )
 
 const (

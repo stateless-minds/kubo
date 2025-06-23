@@ -4,11 +4,11 @@ import (
 	"fmt"
 
 	"github.com/dustin/go-humanize"
-	"github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/core/node/libp2p/fd"
 	"github.com/libp2p/go-libp2p"
 	rcmgr "github.com/libp2p/go-libp2p/p2p/host/resource-manager"
 	"github.com/pbnjay/memory"
+	"github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/core/node/libp2p/fd"
 )
 
 var infiniteResourceLimits = rcmgr.InfiniteLimits.ToPartialLimitConfig().System
@@ -117,7 +117,7 @@ func createDefaultLimitConfig(cfg config.SwarmConfig) (limitConfig rcmgr.Concret
 	// Simple checks to override autoscaling ensuring limits make sense versus the connmgr values.
 	// There are ways to break this, but this should catch most problems already.
 	// We might improve this in the future.
-	// See: https://github.com/ipfs/kubo/issues/9545
+	// See: https://github.com/stateless-minds/kubo/issues/9545
 	if partialLimits.System.ConnsInbound > rcmgr.DefaultLimit && cfg.ConnMgr.Type.WithDefault(config.DefaultConnMgrType) != "none" {
 		maxInboundConns := int64(partialLimits.System.ConnsInbound)
 		if connmgrHighWaterTimesTwo := cfg.ConnMgr.HighWater.WithDefault(config.DefaultConnMgrHighWater) * 2; maxInboundConns < connmgrHighWaterTimesTwo {

@@ -15,17 +15,17 @@ import (
 
 	keystore "github.com/ipfs/boxo/keystore"
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	oldcmds "github.com/ipfs/kubo/commands"
-	config "github.com/ipfs/kubo/config"
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/e"
-	ke "github.com/ipfs/kubo/core/commands/keyencode"
-	options "github.com/ipfs/kubo/core/coreiface/options"
-	fsrepo "github.com/ipfs/kubo/repo/fsrepo"
-	migrations "github.com/ipfs/kubo/repo/fsrepo/migrations"
 	"github.com/libp2p/go-libp2p/core/crypto"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 	mbase "github.com/multiformats/go-multibase"
+	oldcmds "github.com/stateless-minds/kubo/commands"
+	config "github.com/stateless-minds/kubo/config"
+	cmdenv "github.com/stateless-minds/kubo/core/commands/cmdenv"
+	"github.com/stateless-minds/kubo/core/commands/e"
+	ke "github.com/stateless-minds/kubo/core/commands/keyencode"
+	options "github.com/stateless-minds/kubo/core/coreiface/options"
+	fsrepo "github.com/stateless-minds/kubo/repo/fsrepo"
+	migrations "github.com/stateless-minds/kubo/repo/fsrepo/migrations"
 )
 
 var KeyCmd = &cmds.Command{

@@ -9,11 +9,11 @@ import (
 
 	"github.com/ipfs/boxo/ipns"
 	"github.com/ipfs/boxo/path"
-	coreiface "github.com/ipfs/kubo/core/coreiface"
-	caopts "github.com/ipfs/kubo/core/coreiface/options"
-	"github.com/ipfs/kubo/tracing"
 	crypto "github.com/libp2p/go-libp2p/core/crypto"
 	peer "github.com/libp2p/go-libp2p/core/peer"
+	coreiface "github.com/stateless-minds/kubo/core/coreiface"
+	caopts "github.com/stateless-minds/kubo/core/coreiface/options"
+	"github.com/stateless-minds/kubo/tracing"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 )

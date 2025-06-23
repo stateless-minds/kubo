@@ -19,18 +19,18 @@ import (
 	rpqm "github.com/ipfs/boxo/routing/providerquerymanager"
 	"github.com/ipfs/go-cid"
 	ipld "github.com/ipfs/go-ipld-format"
-	version "github.com/ipfs/kubo"
-	"github.com/ipfs/kubo/config"
-	irouting "github.com/ipfs/kubo/routing"
 	"github.com/libp2p/go-libp2p/core/host"
 	peer "github.com/libp2p/go-libp2p/core/peer"
+	version "github.com/stateless-minds/kubo"
+	"github.com/stateless-minds/kubo/config"
+	irouting "github.com/stateless-minds/kubo/routing"
 	"go.uber.org/fx"
 
 	blocks "github.com/ipfs/go-block-format"
-	"github.com/ipfs/kubo/core/node/helpers"
+	"github.com/stateless-minds/kubo/core/node/helpers"
 )
 
-// Docs: https://github.com/ipfs/kubo/blob/master/docs/config.md#internalbitswap
+// Docs: https://github.com/stateless-minds/kubo/blob/master/docs/config.md#internalbitswap
 const (
 	DefaultEngineBlockstoreWorkerCount = 128
 	DefaultTaskWorkerCount             = 8

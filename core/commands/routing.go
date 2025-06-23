@@ -9,18 +9,18 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ipfs/kubo/config"
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
+	"github.com/stateless-minds/kubo/config"
+	cmdenv "github.com/stateless-minds/kubo/core/commands/cmdenv"
 
 	dag "github.com/ipfs/boxo/ipld/merkledag"
 	"github.com/ipfs/boxo/ipns"
 	cid "github.com/ipfs/go-cid"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	ipld "github.com/ipfs/go-ipld-format"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	"github.com/ipfs/kubo/core/coreiface/options"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 	routing "github.com/libp2p/go-libp2p/core/routing"
+	iface "github.com/stateless-minds/kubo/core/coreiface"
+	"github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 var errAllowOffline = errors.New("can't put while offline: pass `--allow-offline` to override")

@@ -3,7 +3,7 @@ package kubo
 import (
 	"net/http"
 
-	"github.com/ipfs/kubo/profile"
+	"github.com/stateless-minds/kubo/profile"
 )
 
 func init() {

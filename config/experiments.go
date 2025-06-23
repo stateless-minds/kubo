@@ -3,7 +3,7 @@ package config
 type Experiments struct {
 	FilestoreEnabled              bool
 	UrlstoreEnabled               bool
-	ShardingEnabled               bool `json:",omitempty"` // deprecated by autosharding: https://github.com/ipfs/kubo/pull/8527
+	ShardingEnabled               bool `json:",omitempty"` // deprecated by autosharding: https://github.com/stateless-minds/kubo/pull/8527
 	Libp2pStreamMounting          bool
 	P2pHttpProxy                  bool //nolint
 	StrategicProviding            bool `json:",omitempty"` // removed, use Provider.Enabled instead

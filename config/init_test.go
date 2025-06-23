@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/ipfs/kubo/core/coreiface/options"
 	crypto_pb "github.com/libp2p/go-libp2p/core/crypto/pb"
+	"github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 func TestCreateIdentity(t *testing.T) {

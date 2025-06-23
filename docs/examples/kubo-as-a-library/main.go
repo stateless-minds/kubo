@@ -13,16 +13,16 @@ import (
 
 	"github.com/ipfs/boxo/files"
 	"github.com/ipfs/boxo/path"
-	icore "github.com/ipfs/kubo/core/coreiface"
 	ma "github.com/multiformats/go-multiaddr"
+	icore "github.com/stateless-minds/kubo/core/coreiface"
 
-	"github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/coreapi"
-	"github.com/ipfs/kubo/core/node/libp2p"
-	"github.com/ipfs/kubo/plugin/loader" // This package is needed so that all the preloaded plugins are loaded automatically
-	"github.com/ipfs/kubo/repo/fsrepo"
 	"github.com/libp2p/go-libp2p/core/peer"
+	"github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/core"
+	"github.com/stateless-minds/kubo/core/coreapi"
+	"github.com/stateless-minds/kubo/core/node/libp2p"
+	"github.com/stateless-minds/kubo/plugin/loader" // This package is needed so that all the preloaded plugins are loaded automatically
+	"github.com/stateless-minds/kubo/repo/fsrepo"
 )
 
 /// ------ Setting up the IPFS Repo
@@ -62,16 +62,16 @@ func createTempRepo() (string, error) {
 	// features (See experimental-features.md) or customizing the gateway endpoint.
 	// To do such things, you should modify the variable `cfg`. For example:
 	if *flagExp {
-		// https://github.com/ipfs/kubo/blob/master/docs/experimental-features.md#ipfs-filestore
+		// https://github.com/stateless-minds/kubo/blob/master/docs/experimental-features.md#ipfs-filestore
 		cfg.Experimental.FilestoreEnabled = true
-		// https://github.com/ipfs/kubo/blob/master/docs/experimental-features.md#ipfs-urlstore
+		// https://github.com/stateless-minds/kubo/blob/master/docs/experimental-features.md#ipfs-urlstore
 		cfg.Experimental.UrlstoreEnabled = true
-		// https://github.com/ipfs/kubo/blob/master/docs/experimental-features.md#ipfs-p2p
+		// https://github.com/stateless-minds/kubo/blob/master/docs/experimental-features.md#ipfs-p2p
 		cfg.Experimental.Libp2pStreamMounting = true
-		// https://github.com/ipfs/kubo/blob/master/docs/experimental-features.md#p2p-http-proxy
+		// https://github.com/stateless-minds/kubo/blob/master/docs/experimental-features.md#p2p-http-proxy
 		cfg.Experimental.P2pHttpProxy = true
-		// See also: https://github.com/ipfs/kubo/blob/master/docs/config.md
-		// And: https://github.com/ipfs/kubo/blob/master/docs/experimental-features.md
+		// See also: https://github.com/stateless-minds/kubo/blob/master/docs/config.md
+		// And: https://github.com/stateless-minds/kubo/blob/master/docs/experimental-features.md
 	}
 
 	// Create the repo with the config

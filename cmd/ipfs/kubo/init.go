@@ -12,16 +12,16 @@ import (
 
 	unixfs "github.com/ipfs/boxo/ipld/unixfs"
 	"github.com/ipfs/boxo/path"
-	assets "github.com/ipfs/kubo/assets"
-	oldcmds "github.com/ipfs/kubo/commands"
-	core "github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/commands"
-	fsrepo "github.com/ipfs/kubo/repo/fsrepo"
+	assets "github.com/stateless-minds/kubo/assets"
+	oldcmds "github.com/stateless-minds/kubo/commands"
+	core "github.com/stateless-minds/kubo/core"
+	"github.com/stateless-minds/kubo/core/commands"
+	fsrepo "github.com/stateless-minds/kubo/repo/fsrepo"
 
 	"github.com/ipfs/boxo/files"
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	config "github.com/ipfs/kubo/config"
-	options "github.com/ipfs/kubo/core/coreiface/options"
+	config "github.com/stateless-minds/kubo/config"
+	options "github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 const (

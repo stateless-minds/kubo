@@ -19,7 +19,7 @@ type Object struct {
 var ErrDataEncoding = errors.New("unknown data field encoding")
 
 var ObjectCmd = &cmds.Command{
-	Status: cmds.Deprecated, // https://github.com/ipfs/kubo/issues/7936
+	Status: cmds.Deprecated, // https://github.com/stateless-minds/kubo/issues/7936
 	Helptext: cmds.HelpText{
 		Tagline: "Deprecated commands to interact with dag-pb objects. Use 'dag' or 'files' instead.",
 		ShortDescription: `

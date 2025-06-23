@@ -6,7 +6,7 @@ Once they reach maturity, there's going to be mention in the changelog and
 release posts. If they don't reach maturity, the same applies, and their code is
 removed.
 
-Subscribe to https://github.com/ipfs/kubo/issues/3397 to get updates.
+Subscribe to https://github.com/stateless-minds/kubo/issues/3397 to get updates.
 
 When you add a new experimental feature to kubo or change an experimental
 feature, you MUST please make a PR updating this document, and link the PR in
@@ -71,7 +71,7 @@ Experimental.
 > This feature provides the IPFS [`add` command](https://docs.ipfs.tech/reference/kubo/cli/#ipfs-add) with access to
 > the local filesystem. Consequently, any user with access to CLI or the HTTP [`/v0/add` RPC API](https://docs.ipfs.tech/reference/kubo/rpc/#api-v0-add) can read
 > files from the local filesystem with the same permissions as the Kubo daemon.
-> If you enable this, secure your RPC API using [`API.Authorizations`](https://github.com/ipfs/kubo/blob/master/docs/config.md#apiauthorizations) or custom auth middleware.
+> If you enable this, secure your RPC API using [`API.Authorizations`](https://github.com/stateless-minds/kubo/blob/master/docs/config.md#apiauthorizations) or custom auth middleware.
 
 Modify your ipfs config:
 ```
@@ -90,7 +90,7 @@ filestore instead of copying the files into your local IPFS repo.
   - [ ] cleanup of broken filesystem references (if file is deleted)
   - [ ] tests that confirm ability to override preexisting filesystem links (allowing user to fix broken link)
   - [ ] support for a single block having more than one sources in filesystem  (blocks can be shared by unrelated files, and not be broken when some files are unpinned / gc'd)
-  - [ ] [other known issues](https://github.com/ipfs/kubo/issues/7161)
+  - [ ] [other known issues](https://github.com/stateless-minds/kubo/issues/7161)
 - [ ] Need to write docs on usage, advantages, disadvantages
 - [ ] Need to merge utility commands to aid in maintenance and repair of filestore
 
@@ -114,7 +114,7 @@ v0.4.17
 > This feature provides the IPFS [`add` CLI command](https://docs.ipfs.tech/reference/kubo/cli/#ipfs-add) with access to
 > the local filesystem. Consequently, any user with access to the CLI or HTTP [`/v0/add` RPC API](https://docs.ipfs.tech/reference/kubo/rpc/#api-v0-add) can read
 > files from the local filesystem with the same permissions as the Kubo daemon.
-> If you enable this, secure your RPC API using [`API.Authorizations`](https://github.com/ipfs/kubo/blob/master/docs/config.md#apiauthorizations) or custom auth middleware.
+> If you enable this, secure your RPC API using [`API.Authorizations`](https://github.com/stateless-minds/kubo/blob/master/docs/config.md#apiauthorizations) or custom auth middleware.
 
 Modify your ipfs config:
 ```
@@ -218,7 +218,7 @@ Experimental, will be stabilized in 0.6.0
 >
 > This feature provides CLI and HTTP RPC user with ability to set up port forwarding for all localhost and LAN ports.
 > If you enable this and plan to expose CLI or HTTP RPC to other users or machines,
-> secure RPC API using [`API.Authorizations`](https://github.com/ipfs/kubo/blob/master/docs/config.md#apiauthorizations) or custom auth middleware.
+> secure RPC API using [`API.Authorizations`](https://github.com/stateless-minds/kubo/blob/master/docs/config.md#apiauthorizations) or custom auth middleware.
 
 The `p2p` command needs to be enabled in the config:
 
@@ -332,7 +332,7 @@ Experimental
 >
 > This feature provides CLI and HTTP RPC user with ability to set up HTTP forwarding for all localhost and LAN ports.
 > If you enable this and plan to expose CLI or HTTP RPC to other users or machines,
-> secure RPC API using [`API.Authorizations`](https://github.com/ipfs/kubo/blob/master/docs/config.md#apiauthorizations) or custom auth middleware.
+> secure RPC API using [`API.Authorizations`](https://github.com/stateless-minds/kubo/blob/master/docs/config.md#apiauthorizations) or custom auth middleware.
 
 The `p2p` command needs to be enabled in the config:
 
@@ -539,7 +539,7 @@ ipfs config --json Swarm.RelayClient.Enabled true
 
 `Experimental.StrategicProviding` was removed in Kubo v0.35.
 
-Replaced by [`Provide.Enabled`](https://github.com/ipfs/kubo/blob/master/docs/config.md#providerenabled) and [`Reprovider.Strategy`](https://github.com/ipfs/kubo/blob/master/docs/config.md#reproviderstrategy).
+Replaced by [`Provide.Enabled`](https://github.com/stateless-minds/kubo/blob/master/docs/config.md#providerenabled) and [`Reprovider.Strategy`](https://github.com/stateless-minds/kubo/blob/master/docs/config.md#reproviderstrategy).
 
 ## GraphSync
 
@@ -549,7 +549,7 @@ Removed, no plans to reintegrate either as experimental or stable feature.
 
 [Trustless Gateway over Libp2p](#http-gateway-over-libp2p) should be easier to use for unixfs usecases and support basic wildcard car streams for non unixfs.
 
-See https://github.com/ipfs/kubo/pull/9747 for more information.
+See https://github.com/stateless-minds/kubo/pull/9747 for more information.
 
 ## Noise
 
@@ -652,7 +652,7 @@ Notes:
     `application/vnd.ipld.car` (from [Trustless Gateway Specification](https://specs.ipfs.tech/http-gateways/trustless-gateway/),
     where data integrity can be verified).
   - Only serve data that is already local to the node (i.e. similar to a
-    [`Gateway.NoFetch`](https://github.com/ipfs/kubo/blob/master/docs/config.md#gatewaynofetch))
+    [`Gateway.NoFetch`](https://github.com/stateless-minds/kubo/blob/master/docs/config.md#gatewaynofetch))
 - While Kubo currently mounts the gateway API at the root (i.e. `/`) of the
   libp2p `/http/1.1` protocol, that is subject to change.
   - The way to reliably discover where a given HTTP protocol is mounted on a
@@ -679,4 +679,4 @@ ipfs config --json Experimental.GatewayOverLibp2p true
 
 ## Accelerated DHT Client
 
-This feature now lives at [`Routing.AcceleratedDHTClient`](https://github.com/ipfs/kubo/blob/master/docs/config.md#routingaccelerateddhtclient).
+This feature now lives at [`Routing.AcceleratedDHTClient`](https://github.com/stateless-minds/kubo/blob/master/docs/config.md#routingaccelerateddhtclient).

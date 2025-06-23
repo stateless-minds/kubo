@@ -3,7 +3,7 @@ package libp2p
 import (
 	"testing"
 
-	config "github.com/ipfs/kubo/config"
+	config "github.com/stateless-minds/kubo/config"
 	"github.com/stretchr/testify/require"
 )
 

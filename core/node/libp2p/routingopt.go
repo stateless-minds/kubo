@@ -6,8 +6,6 @@ import (
 	"time"
 
 	"github.com/ipfs/go-datastore"
-	"github.com/ipfs/kubo/config"
-	irouting "github.com/ipfs/kubo/routing"
 	dht "github.com/libp2p/go-libp2p-kad-dht"
 	dual "github.com/libp2p/go-libp2p-kad-dht/dual"
 	record "github.com/libp2p/go-libp2p-record"
@@ -15,6 +13,8 @@ import (
 	host "github.com/libp2p/go-libp2p/core/host"
 	"github.com/libp2p/go-libp2p/core/peer"
 	routing "github.com/libp2p/go-libp2p/core/routing"
+	"github.com/stateless-minds/kubo/config"
+	irouting "github.com/stateless-minds/kubo/routing"
 )
 
 type RoutingOptionArgs struct {
@@ -72,8 +72,8 @@ func constructDefaultHTTPRouters(cfg *config.Config) ([]*routinghelpers.Parallel
 
 		routers = append(routers, &routinghelpers.ParallelRouter{
 			Router:                  r,
-			IgnoreError:             true,             // https://github.com/ipfs/kubo/pull/9475#discussion_r1042507387
-			Timeout:                 15 * time.Second, // 5x server value from https://github.com/ipfs/kubo/pull/9475#discussion_r1042428529
+			IgnoreError:             true,             // https://github.com/stateless-minds/kubo/pull/9475#discussion_r1042507387
+			Timeout:                 15 * time.Second, // 5x server value from https://github.com/stateless-minds/kubo/pull/9475#discussion_r1042428529
 			DoNotWaitForSearchValue: true,
 			ExecuteAfter:            0,
 		})

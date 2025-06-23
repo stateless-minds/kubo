@@ -8,10 +8,10 @@ import (
 
 	"github.com/ipfs/boxo/path"
 	"github.com/ipfs/go-cid"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	caopts "github.com/ipfs/kubo/core/coreiface/options"
 	mc "github.com/multiformats/go-multicodec"
 	mh "github.com/multiformats/go-multihash"
+	iface "github.com/stateless-minds/kubo/core/coreiface"
+	caopts "github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 type BlockAPI HttpApi

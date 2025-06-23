@@ -31,7 +31,7 @@ Otherwise, check out the following guides to using and developing IPFS:
 - [Installing command completion](command-completion.md)
 - [Mounting IPFS with FUSE](fuse.md)
 - [Installing plugins](plugins.md)
-- [Setting up an IPFS Gateway](https://github.com/ipfs/kubo/blob/master/docs/gateway.md)
+- [Setting up an IPFS Gateway](https://github.com/stateless-minds/kubo/blob/master/docs/gateway.md)
 
 ## Other
 

@@ -8,9 +8,9 @@ import (
 
 	filestore "github.com/ipfs/boxo/filestore"
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	core "github.com/ipfs/kubo/core"
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
-	e "github.com/ipfs/kubo/core/commands/e"
+	core "github.com/stateless-minds/kubo/core"
+	cmdenv "github.com/stateless-minds/kubo/core/commands/cmdenv"
+	e "github.com/stateless-minds/kubo/core/commands/e"
 
 	"github.com/ipfs/go-cid"
 )

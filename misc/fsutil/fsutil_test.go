@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/ipfs/kubo/misc/fsutil"
+	"github.com/stateless-minds/kubo/misc/fsutil"
 	"github.com/stretchr/testify/require"
 )
 

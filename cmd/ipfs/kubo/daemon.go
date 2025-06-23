@@ -19,22 +19,6 @@ import (
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	mprome "github.com/ipfs/go-metrics-prometheus"
-	version "github.com/ipfs/kubo"
-	utilmain "github.com/ipfs/kubo/cmd/ipfs/util"
-	oldcmds "github.com/ipfs/kubo/commands"
-	config "github.com/ipfs/kubo/config"
-	cserial "github.com/ipfs/kubo/config/serialize"
-	"github.com/ipfs/kubo/core"
-	commands "github.com/ipfs/kubo/core/commands"
-	"github.com/ipfs/kubo/core/coreapi"
-	corehttp "github.com/ipfs/kubo/core/corehttp"
-	options "github.com/ipfs/kubo/core/coreiface/options"
-	corerepo "github.com/ipfs/kubo/core/corerepo"
-	libp2p "github.com/ipfs/kubo/core/node/libp2p"
-	nodeMount "github.com/ipfs/kubo/fuse/node"
-	fsrepo "github.com/ipfs/kubo/repo/fsrepo"
-	"github.com/ipfs/kubo/repo/fsrepo/migrations"
-	"github.com/ipfs/kubo/repo/fsrepo/migrations/ipfsfetcher"
 	goprocess "github.com/jbenet/goprocess"
 	p2pcrypto "github.com/libp2p/go-libp2p/core/crypto"
 	pnet "github.com/libp2p/go-libp2p/core/pnet"
@@ -45,6 +29,22 @@ import (
 	manet "github.com/multiformats/go-multiaddr/net"
 	prometheus "github.com/prometheus/client_golang/prometheus"
 	promauto "github.com/prometheus/client_golang/prometheus/promauto"
+	version "github.com/stateless-minds/kubo"
+	utilmain "github.com/stateless-minds/kubo/cmd/ipfs/util"
+	oldcmds "github.com/stateless-minds/kubo/commands"
+	config "github.com/stateless-minds/kubo/config"
+	cserial "github.com/stateless-minds/kubo/config/serialize"
+	"github.com/stateless-minds/kubo/core"
+	commands "github.com/stateless-minds/kubo/core/commands"
+	"github.com/stateless-minds/kubo/core/coreapi"
+	corehttp "github.com/stateless-minds/kubo/core/corehttp"
+	options "github.com/stateless-minds/kubo/core/coreiface/options"
+	corerepo "github.com/stateless-minds/kubo/core/corerepo"
+	libp2p "github.com/stateless-minds/kubo/core/node/libp2p"
+	nodeMount "github.com/stateless-minds/kubo/fuse/node"
+	fsrepo "github.com/stateless-minds/kubo/repo/fsrepo"
+	"github.com/stateless-minds/kubo/repo/fsrepo/migrations"
+	"github.com/stateless-minds/kubo/repo/fsrepo/migrations/ipfsfetcher"
 	"go.uber.org/multierr"
 )
 
@@ -489,10 +489,10 @@ func daemonFunc(req *cmds.Request, re cmds.ResponseEmitter, env cmds.Environment
 		log.Fatal("Private network does not work with Routing.Type=auto. Update your config to Routing.Type=dht (or none, and do manual peering)")
 	}
 	if cfg.Provider.Strategy.WithDefault("") != "" && cfg.Reprovider.Strategy.IsDefault() {
-		log.Fatal("Invalid config. Remove unused Provider.Strategy and set Reprovider.Strategy instead. Documentation: https://github.com/ipfs/kubo/blob/master/docs/config.md#reproviderstrategy")
+		log.Fatal("Invalid config. Remove unused Provider.Strategy and set Reprovider.Strategy instead. Documentation: https://github.com/stateless-minds/kubo/blob/master/docs/config.md#reproviderstrategy")
 	}
 	if cfg.Experimental.StrategicProviding {
-		log.Error("Experimental.StrategicProviding was removed. Remove it from your config and set Provider.Enabled=false to remove this message. Documentation: https://github.com/ipfs/kubo/blob/master/docs/experimental-features.md#strategic-providing")
+		log.Error("Experimental.StrategicProviding was removed. Remove it from your config and set Provider.Enabled=false to remove this message. Documentation: https://github.com/stateless-minds/kubo/blob/master/docs/experimental-features.md#strategic-providing")
 		cfg.Experimental.StrategicProviding = false
 		cfg.Provider.Enabled = config.False
 	}
@@ -759,7 +759,7 @@ func serveHTTPApi(req *cmds.Request, cctx *oldcmds.Context) (<-chan error, error
 		case "tcp", "tcp4", "tcp6":
 			rpc := listener.Addr().String()
 			// replace catch-all with explicit localhost URL that works in browsers
-			// https://github.com/ipfs/kubo/issues/10515
+			// https://github.com/stateless-minds/kubo/issues/10515
 			if strings.Contains(rpc, "0.0.0.0:") {
 				rpc = strings.Replace(rpc, "0.0.0.0:", "127.0.0.1:", 1)
 			} else if strings.Contains(rpc, "[::]:") {
@@ -1221,7 +1221,7 @@ func startVersionChecker(ctx context.Context, nd *core.IpfsNode, enabled bool, p
 
 This Kubo node is running an outdated version (%s).
 %s of the sampled Kubo peers are running a higher version.
-Visit https://github.com/ipfs/kubo/releases or https://dist.ipfs.tech/#kubo and update to version %s or later.`,
+Visit https://github.com/stateless-minds/kubo/releases or https://dist.ipfs.tech/#kubo and update to version %s or later.`,
 					o.RunningVersion, newerPercent, o.GreatestVersion)
 			}
 			select {

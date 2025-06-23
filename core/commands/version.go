@@ -9,13 +9,13 @@ import (
 
 	versioncmp "github.com/hashicorp/go-version"
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	version "github.com/ipfs/kubo"
-	"github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/commands/cmdenv"
 	"github.com/libp2p/go-libp2p-kad-dht/fullrt"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 	pstore "github.com/libp2p/go-libp2p/core/peerstore"
+	version "github.com/stateless-minds/kubo"
+	"github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/core"
+	"github.com/stateless-minds/kubo/core/commands/cmdenv"
 )
 
 const (

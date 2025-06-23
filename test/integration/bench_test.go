@@ -3,8 +3,8 @@ package integrationtest
 import (
 	"testing"
 
-	"github.com/ipfs/kubo/thirdparty/unit"
 	testutil "github.com/libp2p/go-libp2p-testing/net"
+	"github.com/stateless-minds/kubo/thirdparty/unit"
 )
 
 func benchmarkAddCat(numBytes int64, conf testutil.LatencyConfig, b *testing.B) {

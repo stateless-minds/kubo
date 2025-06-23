@@ -9,13 +9,13 @@ import (
 
 	ns "github.com/ipfs/boxo/namesys"
 	cidenc "github.com/ipfs/go-cidutil/cidenc"
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/cmdutils"
-	ncmd "github.com/ipfs/kubo/core/commands/name"
+	cmdenv "github.com/stateless-minds/kubo/core/commands/cmdenv"
+	"github.com/stateless-minds/kubo/core/commands/cmdutils"
+	ncmd "github.com/stateless-minds/kubo/core/commands/name"
 
 	"github.com/ipfs/boxo/path"
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	options "github.com/ipfs/kubo/core/coreiface/options"
+	options "github.com/stateless-minds/kubo/core/coreiface/options"
 )
 
 const (

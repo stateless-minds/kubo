@@ -19,15 +19,15 @@ import (
 	"github.com/ipfs/boxo/ipld/merkledag"
 	"github.com/ipfs/go-cid"
 	legacy "github.com/ipfs/go-ipld-legacy"
-	ipfs "github.com/ipfs/kubo"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	caopts "github.com/ipfs/kubo/core/coreiface/options"
-	"github.com/ipfs/kubo/misc/fsutil"
 	dagpb "github.com/ipld/go-codec-dagpb"
 	_ "github.com/ipld/go-ipld-prime/codec/dagcbor"
 	"github.com/ipld/go-ipld-prime/node/basicnode"
 	ma "github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"
+	ipfs "github.com/stateless-minds/kubo"
+	iface "github.com/stateless-minds/kubo/core/coreiface"
+	caopts "github.com/stateless-minds/kubo/core/coreiface/options"
+	"github.com/stateless-minds/kubo/misc/fsutil"
 )
 
 const (

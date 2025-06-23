@@ -22,10 +22,10 @@ import (
 	"github.com/libp2p/go-libp2p/core/routing"
 	"go.uber.org/fx"
 
-	config "github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/core/node/helpers"
-	"github.com/ipfs/kubo/repo"
-	irouting "github.com/ipfs/kubo/routing"
+	config "github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/core/node/helpers"
+	"github.com/stateless-minds/kubo/repo"
+	irouting "github.com/stateless-minds/kubo/routing"
 )
 
 type Router struct {

@@ -12,9 +12,9 @@ import (
 
 	"bazil.org/fuse"
 
-	core "github.com/ipfs/kubo/core"
-	ipns "github.com/ipfs/kubo/fuse/ipns"
-	mount "github.com/ipfs/kubo/fuse/mount"
+	core "github.com/stateless-minds/kubo/core"
+	ipns "github.com/stateless-minds/kubo/fuse/ipns"
+	mount "github.com/stateless-minds/kubo/fuse/mount"
 
 	ci "github.com/libp2p/go-libp2p-testing/ci"
 )

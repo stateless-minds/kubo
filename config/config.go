@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/ipfs/kubo/misc/fsutil"
+	"github.com/stateless-minds/kubo/misc/fsutil"
 )
 
 // Config is used to load ipfs config files.

@@ -5,10 +5,10 @@ import (
 	"path"
 	"testing"
 
-	rpcapi "github.com/ipfs/kubo/client/rpc"
-	"github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/test/cli/harness"
 	"github.com/multiformats/go-multiaddr"
+	rpcapi "github.com/stateless-minds/kubo/client/rpc"
+	"github.com/stateless-minds/kubo/config"
+	"github.com/stateless-minds/kubo/test/cli/harness"
 	"github.com/stretchr/testify/require"
 )
 

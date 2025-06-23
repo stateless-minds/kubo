@@ -6,7 +6,7 @@ import (
 	"context"
 
 	"github.com/ipfs/boxo/path"
-	"github.com/ipfs/kubo/core/coreiface/options"
+	"github.com/stateless-minds/kubo/core/coreiface/options"
 
 	ipld "github.com/ipfs/go-ipld-format"
 )
