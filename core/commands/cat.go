@@ -11,7 +11,7 @@ import (
 
 	"github.com/cheggaaa/pb"
 	"github.com/ipfs/boxo/files"
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	iface "github.com/ipfs/kubo/core/coreiface"
 )
 

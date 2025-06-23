@@ -10,7 +10,7 @@ import (
 	"github.com/ipfs/kubo/core/commands/cmdutils"
 
 	ipns "github.com/ipfs/boxo/ipns"
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	ke "github.com/ipfs/kubo/core/commands/keyencode"
 	iface "github.com/ipfs/kubo/core/coreiface"
 	options "github.com/ipfs/kubo/core/coreiface/options"

@@ -14,7 +14,7 @@ import (
 	ncmd "github.com/ipfs/kubo/core/commands/name"
 
 	"github.com/ipfs/boxo/path"
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	options "github.com/ipfs/kubo/core/coreiface/options"
 )
 

@@ -6,8 +6,8 @@ import (
 	"testing"
 
 	dag "github.com/ipfs/boxo/ipld/merkledag"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	coremock "github.com/ipfs/kubo/core/mock"
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
 	"github.com/stretchr/testify/require"
 )
 

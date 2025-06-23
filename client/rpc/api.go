@@ -1,10 +1,12 @@
 package rpc
 
 import (
+	"bytes"
 	"context"
 	"encoding/json"
 	"errors"
 	"fmt"
+	"io/ioutil"
 	"net"
 	"net/http"
 	"os"
@@ -289,4 +291,140 @@ func (api *HttpApi) loadRemoteVersion() (*semver.Version, error) {
 	}
 
 	return api.version, nil
+}
+
+func (api *HttpApi) OrbitKVPut(dbAddres, key string, val []byte) error {
+	resp, err := api.Request("orbit/kvput", toMultibase([]byte(dbAddres)), toMultibase([]byte(key))).
+		FileBody(bytes.NewReader(val)).Send(context.Background())
+	if err != nil {
+		return err
+	}
+	defer resp.Close()
+	if resp.Error != nil {
+		return resp.Error
+	}
+	return nil
+}
+
+func (api *HttpApi) OrbitKVGet(dbName, key string) ([]byte, error) {
+	// connect
+	resp, err := api.Request("orbit/kvget", toMultibase([]byte(dbName)), toMultibase([]byte(key))).Send(context.Background())
+	if err != nil {
+		return nil, err
+	}
+	if resp.Error != nil {
+		resp.Close()
+		return nil, resp.Error
+	}
+
+	val, err := ioutil.ReadAll(resp.Output)
+	if err != nil {
+		return nil, err
+	}
+
+	return val, nil
+}
+
+func (api *HttpApi) OrbitKVDelete(dbName, key string) error {
+	// connect
+	resp, err := api.Request("orbit/kvdel", toMultibase([]byte(dbName)), toMultibase([]byte(key))).Send(context.Background())
+	if err != nil {
+		return err
+	}
+	if resp.Error != nil {
+		resp.Close()
+		return resp.Error
+	}
+
+	return nil
+}
+
+func (api *HttpApi) OrbitDocsPut(dbName string, doc []byte) error {
+	resp, err := api.Request("orbit/docsput", toMultibase([]byte(dbName))).
+		FileBody(bytes.NewReader(doc)).Send(context.Background())
+	if err != nil {
+		return err
+	}
+	defer resp.Close()
+	if resp.Error != nil {
+		return resp.Error
+	}
+	return nil
+}
+
+func (api *HttpApi) OrbitDocsGet(dbName, key string) ([]byte, error) {
+	resp, err := api.Request("orbit/docsget", toMultibase([]byte(dbName)), toMultibase([]byte(key))).Send(context.Background())
+	if err != nil {
+		return nil, err
+	}
+	if resp.Error != nil {
+		resp.Close()
+		return nil, resp.Error
+	}
+
+	val, err := ioutil.ReadAll(resp.Output)
+	if err != nil {
+		return nil, err
+	}
+
+	return val, nil
+}
+
+func (api *HttpApi) OrbitDocsQuery(dbName, key, query string) ([]byte, error) {
+	resp, err := api.Request("orbit/docsquery", toMultibase([]byte(dbName)), toMultibase([]byte(key)), toMultibase([]byte(query))).Send(context.Background())
+	if err != nil {
+		return nil, err
+	}
+	if resp.Error != nil {
+		resp.Close()
+		return nil, resp.Error
+	}
+
+	val, err := ioutil.ReadAll(resp.Output)
+	if err != nil {
+		return nil, err
+	}
+
+	return val, nil
+}
+
+func (api *HttpApi) OrbitDocsDelete(dbName, key string) error {
+	resp, err := api.Request("orbit/docsdel", toMultibase([]byte(dbName)), toMultibase([]byte(key))).Send(context.Background())
+	if err != nil {
+		return err
+	}
+	if resp.Error != nil {
+		resp.Close()
+		return resp.Error
+	}
+
+	return nil
+}
+
+func (api *HttpApi) RunInflationIndexer() error {
+	// connect
+	resp, err := api.Request("orbit/runindexer").Send(context.Background())
+	if err != nil {
+		return err
+	}
+	if resp.Error != nil {
+		resp.Close()
+		return resp.Error
+	}
+
+	return nil
+}
+
+func (api *HttpApi) DeleteExpiredSubscriptions() error {
+	// connect
+	resp, err := api.Request("orbit/delexpsubs").Send(context.Background())
+	if err != nil {
+		return err
+	}
+	if resp.Error != nil {
+		resp.Close()
+		return resp.Error
+	}
+
+	return nil
 }

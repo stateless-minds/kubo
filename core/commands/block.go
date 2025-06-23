@@ -14,7 +14,7 @@ import (
 
 	options "github.com/ipfs/kubo/core/coreiface/options"
 
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	mh "github.com/multiformats/go-multihash"
 )
 

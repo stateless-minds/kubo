@@ -8,9 +8,9 @@ import (
 
 	humanize "github.com/dustin/go-humanize"
 	"github.com/ipfs/boxo/provider"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	"github.com/ipfs/kubo/core/commands/cmdenv"
 	"github.com/libp2p/go-libp2p-kad-dht/fullrt"
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
 	"golang.org/x/exp/constraints"
 )
 

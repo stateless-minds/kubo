@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	versioncmp "github.com/hashicorp/go-version"
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	version "github.com/ipfs/kubo"
 	"github.com/ipfs/kubo/config"
 	"github.com/ipfs/kubo/core"

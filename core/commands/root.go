@@ -9,8 +9,8 @@ import (
 	ocmd "github.com/ipfs/kubo/core/commands/object"
 	"github.com/ipfs/kubo/core/commands/pin"
 
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	logging "github.com/ipfs/go-log/v2"
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
 )
 
 var log = logging.Logger("core/commands")

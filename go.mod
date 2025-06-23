@@ -34,6 +34,7 @@ require (
 	github.com/ipfs/go-ds-measure v0.2.2
 	github.com/ipfs/go-ds-pebble v0.5.0
 	github.com/ipfs/go-fs-lock v0.1.1
+	github.com/ipfs/go-ipfs-cmds v0.15.0
 	github.com/ipfs/go-ipld-cbor v0.2.0
 	github.com/ipfs/go-ipld-format v0.6.1
 	github.com/ipfs/go-ipld-git v0.1.1
@@ -70,7 +71,6 @@ require (
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/pbnjay/memory v0.0.0-20210728143218-7b4eea64cf58
 	github.com/prometheus/client_golang v1.22.0
-	github.com/stateless-minds/go-ipfs-cmds v0.14.0
 	github.com/stateless-minds/go-orbit-db v1.23.13
 	github.com/stretchr/testify v1.10.0
 	github.com/syndtr/goleveldb v1.0.1-0.20220721030215-126854af5e6d
