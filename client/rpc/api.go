@@ -293,6 +293,31 @@ func (api *HttpApi) loadRemoteVersion() (*semver.Version, error) {
 	return api.version, nil
 }
 
+type IdOutput struct {
+	ID              string
+	PublicKey       string
+	Addresses       []string
+	AgentVersion    string
+	ProtocolVersion string
+}
+
+// ID gets information about a given peer.  Arguments:
+//
+// peer: peer.ID of the node to look up.  If no peer is specified,
+//
+//	return information about the local peer.
+func (api *HttpApi) ID(peer ...string) (*IdOutput, error) {
+	if len(peer) > 1 {
+		return nil, fmt.Errorf("too many peer arguments")
+	}
+
+	var out IdOutput
+	if err := api.Request("id", peer...).Exec(context.Background(), &out); err != nil {
+		return nil, err
+	}
+	return &out, nil
+}
+
 func (api *HttpApi) OrbitKVPut(dbAddres, key string, val []byte) error {
 	resp, err := api.Request("orbit/kvput", toMultibase([]byte(dbAddres)), toMultibase([]byte(key))).
 		FileBody(bytes.NewReader(val)).Send(context.Background())
