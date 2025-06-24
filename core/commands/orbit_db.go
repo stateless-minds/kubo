@@ -22,11 +22,11 @@ import (
 
 	"github.com/go-webauthn/webauthn/webauthn"
 	"github.com/google/uuid"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	config "github.com/ipfs/kubo/config"
 	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
 	iface "github.com/ipfs/kubo/core/coreiface"
 	peer "github.com/libp2p/go-libp2p/core/peer"
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
 	orbitdb "github.com/stateless-minds/go-orbit-db"
 	"github.com/stateless-minds/go-orbit-db/accesscontroller"
 	address "github.com/stateless-minds/go-orbit-db/address"

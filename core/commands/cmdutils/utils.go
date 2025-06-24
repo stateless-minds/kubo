@@ -3,7 +3,7 @@ package cmdutils
 import (
 	"fmt"
 
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 
 	"github.com/ipfs/boxo/path"
 	"github.com/ipfs/go-cid"

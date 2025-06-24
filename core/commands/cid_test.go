@@ -3,7 +3,7 @@ package commands
 import (
 	"testing"
 
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	"github.com/multiformats/go-multibase"
 )
 

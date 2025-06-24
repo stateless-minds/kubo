@@ -19,7 +19,7 @@ import (
 	"github.com/cheggaaa/pb"
 	"github.com/ipfs/boxo/files"
 	"github.com/ipfs/boxo/tar"
-	cmds "github.com/stateless-minds/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 
 var ErrInvalidCompressionLevel = errors.New("compression level must be between 1 and 9")
