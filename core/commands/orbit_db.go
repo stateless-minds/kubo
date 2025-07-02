@@ -49,6 +49,7 @@ const dbInflation = "inflation"
 const dbPlan = "plan"
 const dbSubscription = "subscription"
 const transactionsPerPerson = 100
+const dbDelivery = "delivery"
 
 type User struct {
 	ID            []byte                      `mapstructure:"_id" json:"_id" validate:"uuid_rfc4122"`                       // Unique identifier for the user (should be a byte array)
@@ -1657,6 +1658,12 @@ func ConnectDocs(ctx context.Context, dbName string, api iface.CoreAPI, onReady 
 				return db, nil, err
 			}
 		}
+	case dbDelivery:
+		addr, err = address.Parse("/orbitdb/bafyreigbduxzzulg6tgnixnpnlsct4chnvnwcf7ivauqehfshl2grih7h4/delivery")
+		if err != nil {
+			return db, nil, err
+		}
+
 	default:
 		// return if the dbName is not expected
 		return db, nil, errors.New("unexpected dbName")
