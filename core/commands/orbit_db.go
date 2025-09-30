@@ -50,6 +50,14 @@ const dbPlan = "plan"
 const dbSubscription = "subscription"
 const transactionsPerPerson = 100
 const dbDelivery = "delivery"
+const dbCard = "card"
+const dbAvatar = "avatar"
+const dbReport = "report"
+const dbRpsAccount = "rps_account"
+const dbRpsWallet = "rps_wallet"
+const dbRpsChallenge = "rps_challenge"
+const dbRpsItem = "rps_item"
+const dbRpsTransaction = "rps_transaction"
 
 type User struct {
 	ID            []byte                      `mapstructure:"_id" json:"_id" validate:"uuid_rfc4122"`                       // Unique identifier for the user (should be a byte array)
@@ -1663,7 +1671,46 @@ func ConnectDocs(ctx context.Context, dbName string, api iface.CoreAPI, onReady 
 		if err != nil {
 			return db, nil, err
 		}
-
+	case dbCard:
+		addr, err = address.Parse("/orbitdb/bafyreih6vu6wmlvsgx5ystw6c2b5bewkamxggms6i332aftgk6w6zuajgq/card")
+		if err != nil {
+			return db, nil, err
+		}
+	case dbAvatar:
+		addr, err = address.Parse("/orbitdb/bafyreif5n263f3auncynh4ngsc4ii4zvx4awexg7sdzofavqskatc6hjle/avatar")
+		if err != nil {
+			return db, nil, err
+		}
+	case dbReport:
+		addr, err = address.Parse("/orbitdb/bafyreia3fccs24inn2nmtoqemcu2hvcbtcqtg6yrboqngvusrmnubffhk4/report")
+		if err != nil {
+			return db, nil, err
+		}
+	case dbRpsAccount:
+		addr, err = address.Parse("/orbitdb/bafyreifb3k6yk5sp7d3xs2g3x7wpmex2xyr46xezuhjmxnfak3w6wjcnwe/rps_account")
+		if err != nil {
+			return db, nil, err
+		}
+	case dbRpsWallet:
+		addr, err = address.Parse("/orbitdb/bafyreifl2277ltvqmkrjpqkb74dzmkbtxws2bdxqjmdb6pfme6gh5eo33u/rps_wallet")
+		if err != nil {
+			return db, nil, err
+		}
+	case dbRpsChallenge:
+		addr, err = address.Parse("/orbitdb/bafyreiee5bifaallmvw2r6g574drkgvqmfe5asmxx45lkx34nqfoszdh7u/rps_challenge")
+		if err != nil {
+			return db, nil, err
+		}
+	case dbRpsItem:
+		addr, err = address.Parse("/orbitdb/bafyreiev5h3aev6acilp37j54yvwcsk5v3qjzpth4rqrhtns25npln26z4/rps_item")
+		if err != nil {
+			return db, nil, err
+		}
+	case dbRpsTransaction:
+		addr, err = address.Parse("/orbitdb/bafyreifpqvk6ccjkpkhydimns5mi42qjdlwphyav3c2apxmzsywurfsh3m/rps_transaction")
+		if err != nil {
+			return db, nil, err
+		}
 	default:
 		// return if the dbName is not expected
 		return db, nil, errors.New("unexpected dbName")
