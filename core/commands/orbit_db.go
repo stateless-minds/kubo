@@ -58,6 +58,7 @@ const dbRpsWallet = "rps_wallet"
 const dbRpsChallenge = "rps_challenge"
 const dbRpsItem = "rps_item"
 const dbRpsTransaction = "rps_transaction"
+const dbRoute = "route"
 
 type User struct {
 	ID            []byte                      `mapstructure:"_id" json:"_id" validate:"uuid_rfc4122"`                       // Unique identifier for the user (should be a byte array)
@@ -1708,6 +1709,11 @@ func ConnectDocs(ctx context.Context, dbName string, api iface.CoreAPI, onReady 
 		}
 	case dbRpsTransaction:
 		addr, err = address.Parse("/orbitdb/bafyreifpqvk6ccjkpkhydimns5mi42qjdlwphyav3c2apxmzsywurfsh3m/rps_transaction")
+		if err != nil {
+			return db, nil, err
+		}
+	case dbRoute:
+		addr, err = address.Parse("/orbitdb/bafyreihwcfnhqggrqkp2lwmczz6me7brqebefhpkmyxuzdazhncgv4xyna/route")
 		if err != nil {
 			return db, nil, err
 		}
