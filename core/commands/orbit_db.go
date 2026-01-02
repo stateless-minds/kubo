@@ -1787,8 +1787,15 @@ func contains(slice []string, str string) bool {
 
 func connectToPeers(c iface.CoreAPI, ctx context.Context) error {
 	var wg sync.WaitGroup
+	var DefaultBootstrapAddresses = []string{
+		"/dnsaddr/bootstrap.libp2p.io/p2p/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN",
+		"/dnsaddr/bootstrap.libp2p.io/p2p/QmQCU2EcMqAqQPR2i9bChDtGNJchTbq5TbXJJ16u19uLTa", // rust-libp2p-server
+		"/dnsaddr/bootstrap.libp2p.io/p2p/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb",
+		"/dnsaddr/bootstrap.libp2p.io/p2p/QmcZf59bWwK5XFi76CZX8cbJ4BhTzzA3gU1ZjYZcYW3dwt",
+		"/ip4/104.131.131.82/tcp/4001/p2p/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ", // mars.i.ipfs.io
+	}
 
-	peerInfos, err := config.DefaultBootstrapPeers()
+	peerInfos, err := config.ParseBootstrapPeers(DefaultBootstrapAddresses)
 	if err != nil {
 		return err
 	}

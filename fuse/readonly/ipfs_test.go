@@ -1,5 +1,4 @@
 //go:build !nofuse && !openbsd && !netbsd && !plan9
-// +build !nofuse,!openbsd,!netbsd,!plan9
 
 package readonly
 
@@ -187,7 +186,7 @@ func TestIpfsStressRead(t *testing.T) {
 			defer wg.Done()
 
 			for i := 0; i < 2000; i++ {
-				item, err := path.NewPath(paths[rand.Intn(len(paths))])
+				item, err := path.NewPath("/ipfs/" + paths[rand.Intn(len(paths))])
 				if err != nil {
 					errs <- err
 					continue

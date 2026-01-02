@@ -29,11 +29,12 @@ import (
 	provider "github.com/ipfs/boxo/provider"
 	ipld "github.com/ipfs/go-ipld-format"
 	logging "github.com/ipfs/go-log/v2"
-	goprocess "github.com/jbenet/goprocess"
 	ddht "github.com/libp2p/go-libp2p-kad-dht/dual"
+	"github.com/libp2p/go-libp2p-kad-dht/fullrt"
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	psrouter "github.com/libp2p/go-libp2p-pubsub-router"
 	record "github.com/libp2p/go-libp2p-record"
+	routinghelpers "github.com/libp2p/go-libp2p-routing-helpers"
 	connmgr "github.com/libp2p/go-libp2p/core/connmgr"
 	ic "github.com/libp2p/go-libp2p/core/crypto"
 	p2phost "github.com/libp2p/go-libp2p/core/host"
@@ -93,33 +94,35 @@ type IpfsNode struct {
 	RecordValidator             record.Validator
 
 	// Online
-	PeerHost                  p2phost.Host               `optional:"true"` // the network host (server+client)
-	Peering                   *peering.PeeringService    `optional:"true"`
-	Filters                   *ma.Filters                `optional:"true"`
-	Bootstrapper              io.Closer                  `optional:"true"` // the periodic bootstrapper
-	Routing                   irouting.ProvideManyRouter `optional:"true"` // the routing system. recommend ipfs-dht
-	DNSResolver               *madns.Resolver            // the DNS resolver
-	IPLDPathResolver          pathresolver.Resolver      `name:"ipldPathResolver"`          // The IPLD path resolver
-	UnixFSPathResolver        pathresolver.Resolver      `name:"unixFSPathResolver"`        // The UnixFS path resolver
-	OfflineIPLDPathResolver   pathresolver.Resolver      `name:"offlineIpldPathResolver"`   // The IPLD path resolver that uses only locally available blocks
-	OfflineUnixFSPathResolver pathresolver.Resolver      `name:"offlineUnixFSPathResolver"` // The UnixFS path resolver that uses only locally available blocks
-	Exchange                  exchange.Interface         // the block exchange + strategy
-	Bitswap                   *bitswap.Bitswap           `optional:"true"` // The Bitswap instance
-	Namesys                   namesys.NameSystem         // the name system, resolves paths to hashes
-	Provider                  provider.System            // the value provider system
-	IpnsRepub                 *ipnsrp.Republisher        `optional:"true"`
-	ResourceManager           network.ResourceManager    `optional:"true"`
+	PeerHost                  p2phost.Host             `optional:"true"` // the network host (server+client)
+	Peering                   *peering.PeeringService  `optional:"true"`
+	Filters                   *ma.Filters              `optional:"true"`
+	Bootstrapper              io.Closer                `optional:"true"` // the periodic bootstrapper
+	ContentDiscovery          routing.ContentDiscovery `optional:"true"` // the discovery part of the routing system
+	DNSResolver               *madns.Resolver          // the DNS resolver
+	IPLDPathResolver          pathresolver.Resolver    `name:"ipldPathResolver"`          // The IPLD path resolver
+	UnixFSPathResolver        pathresolver.Resolver    `name:"unixFSPathResolver"`        // The UnixFS path resolver
+	OfflineIPLDPathResolver   pathresolver.Resolver    `name:"offlineIpldPathResolver"`   // The IPLD path resolver that uses only locally available blocks
+	OfflineUnixFSPathResolver pathresolver.Resolver    `name:"offlineUnixFSPathResolver"` // The UnixFS path resolver that uses only locally available blocks
+	Exchange                  exchange.Interface       // the block exchange + strategy
+	Bitswap                   *bitswap.Bitswap         `optional:"true"` // The Bitswap instance
+	Namesys                   namesys.NameSystem       // the name system, resolves paths to hashes
+	ProvidingStrategy         config.ProvideStrategy   `optional:"true"`
+	ProvidingKeyChanFunc      provider.KeyChanFunc     `optional:"true"`
+	IpnsRepub                 *ipnsrp.Republisher      `optional:"true"`
+	ResourceManager           network.ResourceManager  `optional:"true"`
 
 	PubSub   *pubsub.PubSub             `optional:"true"`
 	PSRouter *psrouter.PubsubValueStore `optional:"true"`
 
-	DHT       *ddht.DHT       `optional:"true"`
-	DHTClient routing.Routing `name:"dhtc" optional:"true"`
+	Routing   irouting.ProvideManyRouter `optional:"true"` // the routing system. recommend ipfs-dht
+	Provider  node.DHTProvider           // the value provider system
+	DHT       *ddht.DHT                  `optional:"true"`
+	DHTClient routing.Routing            `name:"dhtc" optional:"true"`
 
 	P2P *p2p.P2P `optional:"true"`
 
-	Process goprocess.Process
-	ctx     context.Context
+	ctx context.Context
 
 	stop func() error
 
@@ -140,6 +143,42 @@ type Mounts struct {
 // Close calls Close() on the App object
 func (n *IpfsNode) Close() error {
 	return n.stop()
+}
+
+// HasActiveDHTClient checks if the node's DHT client is active and usable for DHT operations.
+//
+// Returns false for:
+//   - nil DHTClient
+//   - typed nil pointers (e.g., (*ddht.DHT)(nil))
+//   - no-op routers (routinghelpers.Null)
+//
+// Note: This method only checks for known DHT client types (ddht.DHT, fullrt.FullRT).
+// Custom routing.Routing implementations are not explicitly validated.
+//
+// This method prevents the "typed nil interface" bug where an interface contains
+// a nil pointer of a concrete type, which passes nil checks but panics when methods
+// are called.
+func (n *IpfsNode) HasActiveDHTClient() bool {
+	if n.DHTClient == nil {
+		return false
+	}
+
+	// Check for no-op router (Routing.Type=none)
+	if _, ok := n.DHTClient.(routinghelpers.Null); ok {
+		return false
+	}
+
+	// Check for typed nil *ddht.DHT (common when Routing.Type=delegated or HTTP-only)
+	if d, ok := n.DHTClient.(*ddht.DHT); ok && d == nil {
+		return false
+	}
+
+	// Check for typed nil *fullrt.FullRT (accelerated DHT client)
+	if f, ok := n.DHTClient.(*fullrt.FullRT); ok && f == nil {
+		return false
+	}
+
+	return true
 }
 
 // Context returns the IpfsNode context
@@ -212,7 +251,8 @@ func (n *IpfsNode) loadBootstrapPeers() ([]peer.AddrInfo, error) {
 		return nil, err
 	}
 
-	return cfg.BootstrapPeers()
+	// Use auto-config resolution for actual bootstrap connectivity
+	return cfg.BootstrapPeersWithAutoConf()
 }
 
 func (n *IpfsNode) saveTempBootstrapPeers(ctx context.Context, peerList []peer.AddrInfo) error {
