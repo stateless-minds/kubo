@@ -59,6 +59,8 @@ const dbRpsChallenge = "rps_challenge"
 const dbRpsItem = "rps_item"
 const dbRpsTransaction = "rps_transaction"
 const dbRoute = "route"
+const dbBlueprintcityTerrain = "blueprintcity_terrain"
+const dbBlueprintcityItems = "blueprintcity_items"
 
 type User struct {
 	ID            []byte                      `mapstructure:"_id" json:"_id" validate:"uuid_rfc4122"`                       // Unique identifier for the user (should be a byte array)
@@ -1714,6 +1716,16 @@ func ConnectDocs(ctx context.Context, dbName string, api iface.CoreAPI, onReady 
 		}
 	case dbRoute:
 		addr, err = address.Parse("/orbitdb/bafyreihwcfnhqggrqkp2lwmczz6me7brqebefhpkmyxuzdazhncgv4xyna/route")
+		if err != nil {
+			return db, nil, err
+		}
+	case dbBlueprintcityTerrain:
+		addr, err = address.Parse("/orbitdb/bafyreib75plu35rcznkhs2agchuhfht7gprl2mnywozuqxqfhol4sojeam/blueprintcity_terrain")
+		if err != nil {
+			return db, nil, err
+		}
+	case dbBlueprintcityItems:
+		addr, err = address.Parse("/orbitdb/bafyreifupilizotbe4rxsy2ot32q5udfjb3xk3bm5eladwsmew4lugfpvy/blueprintcity_items")
 		if err != nil {
 			return db, nil, err
 		}
